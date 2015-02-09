@@ -1,0 +1,56 @@
+html {
+	background: ghostwhite;
+	background-repeat: no-repeat;
+	background-size: 150%;
+	overflow-y: scroll;
+	min-height: 100%
+}
+body {
+	margin: 0;
+}
+header, .content {
+	padding: 16px;
+}
+.wrapper {
+	margin: 40px auto auto;
+	max-width: 800px;
+	box-shadow: 1px 1px 2px #bfbfbf;
+}
+.header {
+	background-color: #003459;
+}
+.content {
+	font-family: Helvetica;
+	/*background-color: #121420;*/
+}
+.links {
+	float: right;
+	display: inline;
+	vertical-align: middle;
+}
+.icon {
+	margin: 5px 2px 5px 2px;
+	height: 30px;
+}
+
+hr {
+	border: 1px solid #003459;
+}
+
+a, h1, h2, h3, h4 {
+	margin: 0;
+	color: #121420;
+	font-family: Helvetica;
+}
+h3 {
+	margin: 6px;
+}
+h1, h3 {
+	display: inline;
+}
+p {
+	margin: 6px 18px 6px 18px;
+	text-indent: 25px;
+	color: #121420;
+	font-size: 18px;
+}
