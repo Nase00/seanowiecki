@@ -1,26 +1,30 @@
 function removeLinkInfo() {
 	$('#link-info').html('');
 }
+function previewLink(selector, link) {
+	selector.hover(function() {
+		$('#link-info').html(link)
+	}, function() {
+		removeLinkInfo();
+	})
+}
 $(document).ready(function() {
-	var linkInfo = $('#link-info')
-	$('#github-icon').hover(function() {
-		linkInfo.html('[ github.com/Nase00 ]')
+	previewLink($('#github-icon'), '[ github.com/Nase00 ]')
+	previewLink($('#gmail-icon'), '[ seanowiecki@gmail.com ]')
+	previewLink($('#linkedin-icon'), '[ linkedin.com/pub/sean-owiecki ]')
+	previewLink($('#twitter-icon'), '[ twitter.com/NaseZero ]')
+
+	var atomic6Preview = $('#atomic6-preview')
+	atomic6Preview.hover(function() {
+		atomic6Preview.attr("src", 'images/atomic6_code_preview.png');
 	}, function() {
-		removeLinkInfo();
+		atomic6Preview.attr("src", 'images/atomic6_preview.png');
 	})
-	$('#gmail-icon').hover(function() {
-		linkInfo.html('[ seanowiecki@gmail.com ]')
+
+	var horizonPreview = $('#horizon-preview')
+	horizonPreview.hover(function() {
+		horizonPreview.attr("src", 'images/horizon_code_preview.png');
 	}, function() {
-		removeLinkInfo();
-	})
-	$('#linkedin-icon').hover(function() {
-		linkInfo.html('[ linkedin.com/pub/sean-owiecki ]')
-	}, function() {
-		removeLinkInfo();
-	})
-	$('#twitter-icon').hover(function() {
-		linkInfo.html('[ twitter.com/NaseZero ]')
-	}, function() {
-		removeLinkInfo();
+		horizonPreview.attr("src", 'images/horizon_preview.png');
 	})
 })
