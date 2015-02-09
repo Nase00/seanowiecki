@@ -20,7 +20,7 @@ $(document).ready(function() {
 	}, function() {
 		atomic6Preview.attr("src", 'images/atomic6_preview.png');
 	})
-	
+
 	var horizonPreview = $('#horizon-preview')
 	horizonPreview.hover(function() {
 		horizonPreview.attr("src", 'images/horizon_code_preview.png');
