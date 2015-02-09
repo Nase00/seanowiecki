@@ -54,17 +54,23 @@ a:hover {
 	color: #007fbf;
 	text-decoration: underline;
 }
+h3, h5 {
+	display: inline;
+}
 h3, h4, h5 {
-	margin: 6px;
+	/*margin: 6px;*/
 }
 h5 {
 	font-weight: normal;
 }
 p {
 	margin: 6px 18px 6px 18px;
-	text-indent: 25px;
+	text-indent: 15px;
 	color: #121420;
 	font-size: 18px;
+}
+li {
+	list-style-type: square;
 }
 
 .me {
