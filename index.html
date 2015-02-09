@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesheets/application.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/application.js"></script>
+    <script src="javascripts/underscore-min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -15,10 +16,11 @@
           <img class="me" src="images/me.jpg" />
           <img src="images/seanowiecki.png" />
           <img src="images/subtitle.png" />
-          <a href="https://github.com/Nase00" target="_blank"><img class="icon" src="images/github_icon.png" /></a>
-          <a href="mailto:seanowiecki@gmail.com" target="_blank"><img class="icon" src="images/gmail_icon.png" /></a>
-          <a href="https://www.linkedin.com/pub/sean-owiecki/a3/732/66b" target="_blank"><img class="icon" src="images/linkedin_icon.png" /></a>
-          <!-- Keeping hidden until I fix the icon to match <a href="https://twitter.com/NaseZero" target="_blank"><img class="icon" src="images/twitter_icon.png" /></a> -->
+          <a href="https://github.com/Nase00" target="_blank"><img id="github-icon" class="icon" src="images/github_icon.png" /></a>
+          <a href="mailto:seanowiecki@gmail.com" target="_blank"><img id="gmail-icon" class="icon" src="images/gmail_icon.png" /></a>
+          <a href="https://www.linkedin.com/pub/sean-owiecki/a3/732/66b" target="_blank"><img id="linkedin-icon" class="icon" src="images/linkedin_icon.png" /></a>
+          <!-- Hide until icon matches <a href="https://twitter.com/NaseZero" target="_blank"><img id="twitter-icon" class="icon" src="images/twitter_icon.png" /></a> -->
+          <div id="link-info"></div>
         </header>
       </div>
       <div class="content">
@@ -32,12 +34,14 @@
         <h2>&#10148; Projects</h2>
         <div id="projects">
           <div class="project">
-            <a href="http://beyondyourhorizon.heroku.com" target="_blank"><img class="preview-image" src="images/horizon_preview.png" /></a>
+            <a href="http://beyondyourhorizon.heroku.com" target="_blank"><img class="preview-image" src="images/horizon_preview.png" />
+            <h4>Horizon</h4></a>
             <p class="project-description">An interactive visualization of one's exposure to topics within their bubble of Twitter followees. Powered by Ruby on Rails and Neo4j. Built
           in 8 days during Phase 3 of Dev Bootcamp.</p>
           </div>
           <div class="project">
-            <a href="http://atomic6.heroku.com" target="_blank"><img class="preview-image" src="images/atomic6_preview.png" /></a>
+            <a href="http://atomic6.heroku.com" target="_blank"><img class="preview-image" src="images/atomic6_preview.png" />
+            <h4>Atomic6</h4></a>
             <p class="project-description">A blog built solo as a side project while in the middle of Dev Bootcamp to practice my skills in Ruby, Sinatra, jQuery, and AJAX.</p>
           </div>
           <div class="project">

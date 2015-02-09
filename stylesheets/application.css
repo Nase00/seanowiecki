@@ -1,3 +1,6 @@
+* {
+	font-family: Helvetica;
+}
 html {
 	background: #007fbf;
 	background-repeat: no-repeat;
@@ -21,12 +24,21 @@ header {
 	border-radius: 10px;
 	box-shadow: 1px 1px 2px #bfbfbf;
 }
-.content {
-	font-family: Helvetica;
-}
 .links {
 	margin: 0 auto auto;
 	text-align: center;
+}
+#link-info {
+position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+	min-height: 22px;
+	color: #007fbf;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 18px;
 }
 
 hr {
@@ -36,7 +48,11 @@ hr {
 a, h1, h2, h3, h4, h5 {
 	margin: 0;
 	color: #121420;
-	font-family: Helvetica;
+	text-decoration: none;
+}
+a:hover {
+	color: #007fbf;
+	text-decoration: underline;
 }
 h3, h4, h5 {
 	margin: 6px;
@@ -53,6 +69,7 @@ p {
 
 .me {
 	display: inline;
+	width: 170px;
 	/*border: 3px solid #2f3a3f;*/
 	border-radius: 500px;
 	box-shadow: 1px 1px 2px #bfbfbf;
@@ -62,7 +79,7 @@ p {
 	height: 50px;
 }
 .preview-image {
-	margin: 20px;
+	margin: 6px 20px 6px 20px;
 	border-radius: 20px;
 	border: 1px solid #A6A6A8;
 	box-shadow: 1px 1px 2px #bfbfbf;
@@ -75,7 +92,7 @@ p {
 .project {
 	vertical-align: top;
 	display: inline-block;
-	margin: 0 0 20px 0;
+	/*margin: 0 0 20px 0;*/
 	text-align: center;
 }
 .project-description {
