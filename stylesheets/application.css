@@ -1,5 +1,5 @@
 html {
-	background: ghostwhite;
+	background: #007fbf;
 	background-repeat: no-repeat;
 	background-size: 150%;
 	overflow-y: scroll;
@@ -8,49 +8,77 @@ html {
 body {
 	margin: 0;
 }
-header, .content {
+header {
+	margin: 0 auto auto;
 	padding: 16px;
+	text-align: center;
 }
 .wrapper {
-	margin: 40px auto auto;
-	max-width: 800px;
+	margin: 40px auto 40px;
+	padding: 20px;
+	max-width: 960px;
+	background-color: #F8F8FF;
+	border-radius: 10px;
 	box-shadow: 1px 1px 2px #bfbfbf;
-}
-.header {
-	background-color: #003459;
 }
 .content {
 	font-family: Helvetica;
-	/*background-color: #121420;*/
 }
 .links {
-	float: right;
-	display: inline;
-	vertical-align: middle;
-}
-.icon {
-	margin: 5px 2px 5px 2px;
-	height: 30px;
+	margin: 0 auto auto;
+	text-align: center;
 }
 
 hr {
 	border: 1px solid #003459;
 }
 
-a, h1, h2, h3, h4 {
+a, h1, h2, h3, h4, h5 {
 	margin: 0;
 	color: #121420;
 	font-family: Helvetica;
 }
-h3 {
+h3, h4, h5 {
 	margin: 6px;
 }
-h1, h3 {
-	display: inline;
+h5 {
+	font-weight: normal;
 }
 p {
 	margin: 6px 18px 6px 18px;
 	text-indent: 25px;
 	color: #121420;
 	font-size: 18px;
+}
+
+.me {
+	display: inline;
+	/*border: 3px solid #2f3a3f;*/
+	border-radius: 500px;
+	box-shadow: 1px 1px 2px #bfbfbf;
+}
+.icon {
+	margin: 5px 2px 5px 2px;
+	height: 50px;
+}
+.preview-image {
+	margin: 20px;
+	border-radius: 20px;
+	border: 1px solid #A6A6A8;
+	box-shadow: 1px 1px 2px #bfbfbf;
+}
+#projects, #experiences {
+	margin: auto;
+	padding: 0;
+	max-width: 890px;
+}
+.project {
+	vertical-align: top;
+	display: inline-block;
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+.project-description {
+	width: 402px;
+	text-align: left;
 }
