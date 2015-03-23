@@ -1,7 +1,6 @@
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
-var ReactTransitionGroup = React.addons.TransitionGroup;
-
-var AppLength = 6
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
+		ReactTransitionGroup = React.addons.TransitionGroup,
+		AppLength = 6
 
 var Slide = React.createClass({
 		getInitialState: function() {
@@ -23,25 +22,25 @@ var Slide = React.createClass({
     },
     render: function() {
       var slide = [
-        <div key="first-slide" id="first-slide">
+        <div key="first-slide" id="slide">
         	First slide
         </div>,
-        <div key="second-slide" id="second-slide">
+        <div key="second-slide" id="slide">
         	Second slide
         </div>,
-        <div key="third-slide" id="second-slide">
+        <div key="third-slide" id="slide">
         	Third slide
         </div>,
-        <div key="fourth-slide" id="second-slide">
+        <div key="fourth-slide" id="slide">
         	Fourth slide
         </div>,
-        <div key="fifth-slide" id="second-slide">
+        <div key="fifth-slide" id="slide">
         	Fifth slide
         </div>,
-        <div key="fifth-slide" id="second-slide">
+        <div key="fifth-slide" id="slide">
         	Sixth slide
         </div>
-        ,<div key="fifth-slide" id="second-slide">
+        ,<div key="fifth-slide" id="slide">
         	Seventh slide
         </div>
       ][this.state.page]

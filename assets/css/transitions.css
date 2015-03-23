@@ -1,16 +1,19 @@
 .slide-enter {
+  position: absolute;
   opacity: 0.01;
-  transition: opacity .5s ease-in;
   transition: all .5s ease .2s;
 }
 .slide-enter.slide-enter-active {
+  position: absolute;
   opacity: 1;
 }
 .slide-leave {
+  position: absolute;
   opacity: 1;
-  transform: translate3d(0,300px,0);
-  transition: all .5s ease .2s;
 }
 .slide-leave.slide-leave-active {
+  position: absolute;
   opacity: 0.01;
+  transform: translate3d(0,200px,0);
+  transition: all .5s ease .2s;
 }
