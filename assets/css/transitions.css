@@ -1,6 +1,7 @@
 .slide-enter {
   position: absolute;
   opacity: 0.01;
+  width: 320px;
   transition: all .25s;
 }
 .slide-enter.slide-enter-active {
@@ -10,6 +11,7 @@
 .slide-leave {
   position: absolute;
   opacity: 1;
+  width: 320px;
 }
 .slide-leave.slide-leave-active {
   position: absolute;

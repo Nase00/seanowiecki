@@ -1,17 +1,53 @@
-html, body {
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+html {
+	background: #3f3f3f;
+	background-image:
+	-webkit-radial-gradient(20% bottom, rgb(25, 25, 25) 0%, rgb(25,25,25) 75%),
+	-webkit-radial-gradient(right top, rgb(125, 125, 125) 100%, rgba(100, 100, 100,0) 57%);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: #262626;
 	overflow: hidden;
+	min-height: 100%;
+}
+body {
+	margin: 0 auto auto;
+}
+
+a {
+	color: #ffaa00;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.noclick {
+	pointer-events: none;
 }
 
 #wrapper {
-	position: absolute;
-	margin: 0 auto auto;
-	right: 0; left: 0;
-	width: 960px;
+	margin: auto;
+	width: 100%;
 }
 
-#slide {
-	height: 500px;
-	width: 960px;
+#page {
+	box-sizing: border-box;
+	margin: auto;
+	padding: 1em;
+	height: 100%;
+	width: 320px;
+	font-family: 'Droid Sans Mono';
 	color: #FFFFFF;
 	background-color: #000000;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	font-family: 'Abel';
+}
+
+img.preview {
+	width: 100%;
 }

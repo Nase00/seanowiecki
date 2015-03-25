@@ -1,0 +1,12 @@
+nav {
+	text-align: center;
+}
+.nav-arrow {
+	margin: 0 .45em .45em;
+	outline: none;
+	font-size: 6em;
+}
+.nav-arrow:hover {
+	text-decoration: none;
+	color: #ffbf00;
+}
