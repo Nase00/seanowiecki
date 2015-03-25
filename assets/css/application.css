@@ -3,14 +3,10 @@
 
 html {
 	background: #3f3f3f;
-	background-image:
-	-webkit-radial-gradient(20% bottom, rgb(25, 25, 25) 0%, rgb(25,25,25) 75%),
-	-webkit-radial-gradient(right top, rgb(125, 125, 125) 100%, rgba(100, 100, 100,0) 57%);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	color: #262626;
-	overflow: hidden;
-	min-height: 100%;
+	overflow: scroll;
 }
 body {
 	margin: 0 auto auto;
@@ -27,20 +23,29 @@ a:hover {
 	pointer-events: none;
 }
 
+#anchor {
+	height: 100%;
+}
 #wrapper {
 	margin: auto;
 	width: 100%;
 }
 
-#page {
+#slide {
 	box-sizing: border-box;
+	position: absolute;
 	margin: auto;
+	left: 0; right: 0;
 	padding: 1em;
-	height: 100%;
 	width: 320px;
 	font-family: 'Droid Sans Mono';
 	color: #FFFFFF;
-	background-color: #000000;
+	/*background-color: #000000;*/
+}
+
+#page {
+	/*position: relative;*/
+	min-height: 50%;
 }
 
 h1, h2, h3, h4 {
@@ -48,6 +53,6 @@ h1, h2, h3, h4 {
 	font-family: 'Abel';
 }
 
-img.preview {
+img.preview, img {
 	width: 100%;
 }

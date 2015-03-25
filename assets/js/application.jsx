@@ -1,12 +1,13 @@
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
 		ReactTransitionGroup = React.addons.TransitionGroup,
-		AppLength = 6
+		AppLength = 7
 
 var Slide = React.createClass({
 		getInitialState: function() {
       return {
         mounted: false,
-        page: 0
+        page: 0,
+        previousPage: 0
       };
     },
     componentDidMount: function() {
@@ -15,9 +16,11 @@ var Slide = React.createClass({
       });
     },
     nextPage: function() {
+      this.setState({previousPage: this.state.page});
     	this.state.page === AppLength ? null : this.setState({page: this.state.page + 1});
     },
     previousPage: function() {
+      this.setState({previousPage: this.state.page});
     	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
     render: function() {
@@ -32,14 +35,20 @@ var Slide = React.createClass({
             </nav>;
 
       return (
-        <div id="page">
-	        {navigation}
-          <div className="title slide">
-            <ReactCSSTransitionGroup transitionName="slide">
-              {content}
-            </ReactCSSTransitionGroup>
+        <div id="wrapper">
+          <header>
+            {navigation}
+          </header>
+          <div id="page">
+            <div>
+              <ReactCSSTransitionGroup transitionName={content.key >= this.state.previousPage ? "slide-left" : "slide-right"}>
+                {content}
+              </ReactCSSTransitionGroup>
+            </div>
           </div>
-          {navigation}
+          <footer>
+            {navigation}
+          </footer>
         </div>
       );
 	  }
@@ -52,9 +61,9 @@ var Slide = React.createClass({
     },
     render: function() {
       return (
-        <div>{this.props.data}</div>
+        <div id="slide">{this.props.data}</div>
       );
     }
   })
 
-	React.render(<Slide/>, document.getElementById("slides"));
+	React.render(<Slide/>, document.getElementById("anchor"));

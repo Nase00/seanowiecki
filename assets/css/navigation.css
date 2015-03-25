@@ -4,9 +4,15 @@ nav {
 .nav-arrow {
 	margin: 0 .45em .45em;
 	outline: none;
+	font-family: 'Droid Sans Mono';
 	font-size: 6em;
 }
 .nav-arrow:hover {
 	text-decoration: none;
 	color: #ffbf00;
+}
+
+footer {
+	position: fixed;
+	bottom: 0; left: 0; right: 0;
 }
