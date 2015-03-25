@@ -1,7 +1,7 @@
 .slide-enter {
   position: absolute;
   opacity: 0.01;
-  transition: all .5s ease .2s;
+  transition: all .25s;
 }
 .slide-enter.slide-enter-active {
   position: absolute;
@@ -13,7 +13,6 @@
 }
 .slide-leave.slide-leave-active {
   position: absolute;
-  opacity: 0.01;
-  transform: translate3d(0,200px,0);
-  transition: all .5s ease .2s;
+  opacity: 0.5;
+  transition: all .25s;
 }

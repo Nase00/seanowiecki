@@ -21,31 +21,32 @@ var Slide = React.createClass({
     	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
     render: function() {
-      var slide = [
-        <div key="first-slide" id="slide">
-        	First slide
-        </div>,
-        <div key="second-slide" id="slide">
-        	Second slide
-        </div>,
-        <div key="third-slide" id="slide">
-        	Third slide
-        </div>,
-        <div key="fourth-slide" id="slide">
-        	Fourth slide
-        </div>,
-        <div key="fifth-slide" id="slide">
-        	Fifth slide
-        </div>,
-        <div key="fifth-slide" id="slide">
-        	Sixth slide
-        </div>
-        ,<div key="fifth-slide" id="slide">
-        	Seventh slide
-        </div>
-      ][this.state.page]
+      var key = 0,
+          slides = [
+            <div>
+            	First slide
+            </div>,
+            <div>
+            	Second slide
+            </div>,
+            <div>
+            	Third slide
+            </div>,
+            <div>
+            	Fourth slide
+            </div>,
+            <div>
+            	Fifth slide
+            </div>,
+            <div>
+            	Sixth slide
+            </div>,
+            <div>
+            	Seventh slide
+            </div>
+          ][this.state.page]
       		
-      var content = <SlideContainer key={this.state.page} data={slide} />
+      var content = <SlideContainer key={this.state.page} data={slides} />
       return (
         <div>
 	        <nav>
@@ -67,7 +68,7 @@ var Slide = React.createClass({
     },
     render: function() {
       return (
-        <div>{this.props.data}</div>
+        <div id="slide">{this.props.data}</div>
       );
     }
   })
