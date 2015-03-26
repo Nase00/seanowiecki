@@ -41,14 +41,16 @@ var Slide = React.createClass({displayName: "Slide",
             this.state.page === 0 ? filler : React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow noselect", href: "#", onClick: this.previousPage}, "«"),
           rightArrow =
             this.state.page === AppLength ? filler : React.createElement("a", {key: "next-page", id: "next-page", className: "nav-arrow noselect", href: "#", onClick: this.nextPage}, "»"),
+          diamond =
+            React.createElement("span", {className: "diamond noselect"}, "◆"),
           navigation =
             React.createElement("nav", null, leftArrow, rightArrow), 
           fastNav =
             React.createElement("nav", {className: "fast-nav"}, 
               React.createElement("a", {key: "project-page", id: "project-page", className: "noselect", href: "#", onClick: this.projectPage}, "Projects"), 
-              React.createElement("span", {className: "diamond noselect"}, "◆"), 
+              diamond, 
               React.createElement("a", {key: "skills-page", id: "skills-page", className: "noselect", href: "#", onClick: this.skillsPage}, "Skills"), 
-              React.createElement("span", {className: "diamond noselect"}, "◆"), 
+              diamond, 
               React.createElement("a", {key: "connect-page", id: "connect-page", className: "noselect", href: "#", onClick: this.connectPage}, "Connect")
             );
 
