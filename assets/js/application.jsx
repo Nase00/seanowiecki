@@ -1,6 +1,6 @@
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
 		ReactTransitionGroup = React.addons.TransitionGroup,
-		AppLength = 7
+		AppLength = slides.length - 1;
 
 var Slide = React.createClass({
 		getInitialState: function() {

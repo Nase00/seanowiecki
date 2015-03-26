@@ -1,4 +1,4 @@
-.slide-left-enter {
+.slide-left-enter, .slide-right-enter {
   box-sizing: border-box;
   position: absolute;
   margin: auto;
@@ -7,7 +7,7 @@
   opacity: 0.01;
   transition: all .25s;
 }
-.slide-left-enter.slide-left-enter-active {
+.slide-left-enter.slide-left-enter-active, .slide-right-enter.slide-right-enter-active {
   box-sizing: border-box;
   position: absolute;
   margin: auto;
@@ -33,27 +33,9 @@
   width: 288px;
   opacity: 0.5;
   transform: translateX(-100em);
-  transition: all 1.75s;
+  transition: all .75s;
 }
 
-.slide-right-enter {
-  box-sizing: border-box;
-  position: absolute;
-  margin: auto;
-  height: 100%;
-  width: 288px;
-  opacity: 0.01;
-  transition: all .25s;
-}
-.slide-right-enter.slide-right-enter-active {
-  box-sizing: border-box;
-  position: absolute;
-  margin: auto;
-  height: 100%;
-  width: 288px;
-  opacity: 1;
-  transition: all .25s;
-}
 .slide-right-leave {
   box-sizing: border-box;
   position: absolute;
@@ -71,5 +53,5 @@
   width: 288px;
   opacity: 0.5;
   transform: translateX(100em);
-  transition: all 1.75s;
+  transition: all .75s;
 }

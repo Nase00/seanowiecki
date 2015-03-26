@@ -5,7 +5,6 @@ html {
 	background: #3f3f3f;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	color: #262626;
 	overflow: scroll;
 }
 body {
@@ -38,21 +37,62 @@ a:hover {
 	left: 0; right: 0;
 	padding: 1em;
 	width: 320px;
+	height: 620px;
 	font-family: 'Droid Sans Mono';
 	color: #FFFFFF;
 	/*background-color: #000000;*/
 }
 
-#page {
-	/*position: relative;*/
-	min-height: 50%;
-}
-
-h1, h2, h3, h4 {
+.title, h1, h2, h3, h4, h4 > a {
 	margin: 0;
-	font-family: 'Abel';
+	text-align: center;
+	font-family: 'Abel', sans-serif;
+	text-shadow: 1px 1px 0px rgba(60, 60, 60, 1);
+}
+h1 {
+	padding: 0 0 .5em 0;
+}
+.links {
+	text-align: center;
+}
+li {
+	margin: .5em;
 }
 
 img.preview, img {
+	display: block;
+	margin: .25em;
 	width: 100%;
+	border: 1px solid #ffbf00;
+}
+
+a.link {
+	margin: .25em;
+	padding: .5em;
+	color: #191919;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ffbf00;
+	border: 1px solid #191919;
+	transition: all .75s;
+}
+a.link:nth-child(2) {
+	right: 0;
+}
+a.link:hover {
+	width: 40%;
+	color: #ffbf00;
+	text-decoration: none;
+	background-color: #191919;
+	border: 1px solid #ffbf00;
+}
+a.project {
+	display: inline-block;
+	width: 30%;
+}
+a.connect {
+	display: block;
+	margin: 1em auto;
+	width: 35%;
 }
