@@ -4,6 +4,7 @@ nav {
 .nav-arrow {
 	margin: 0 .25em .25em;
 	outline: none;
+	line-height: .5em;
 	font-family: 'Droid Sans Mono';
 	font-size: 6em;
 	bottom: 1em;
