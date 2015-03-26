@@ -11,6 +11,13 @@ nav {
 	text-decoration: none;
 	color: #ffbf00;
 }
+.fast-nav {
+	font-family: 'Abel', sans-serif;
+	font-size: 1.5em;
+}
+.fast-nav > a {
+	margin: .25em;
+}
 
 footer {
 	position: fixed;

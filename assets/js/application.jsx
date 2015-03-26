@@ -23,6 +23,15 @@ var Slide = React.createClass({
       this.setState({previousPage: this.state.page});
     	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
+    projectPage: function() {
+      this.setState({page: 2});
+    },
+    skillsPage: function() {
+      this.setState({page: 5});
+    },
+    connectPage: function() {
+      this.setState({page: AppLength});
+    },
     render: function() {
       var key = 0,
           filler = <span className="nav-arrow noclick">{"\u00a0"}</span>,
@@ -32,6 +41,14 @@ var Slide = React.createClass({
             <nav>
               {this.state.page === 0 ? {filler} : <a key="previous-page" id="previous-page" className="nav-arrow" href="#" onClick={this.previousPage}>«</a>}
               {this.state.page === AppLength ? {filler} : <a key="next-page" id="next-page" className="nav-arrow" href="#" onClick={this.nextPage}>»</a>}
+            </nav>,
+          fastNav =
+            <nav className="fast-nav">
+              <a key="project-page" id="project-page" href="#" onClick={this.projectPage}>Projects</a>
+              <span className="diamond">◆</span>
+              <a key="skills-page" id="skills-page" href="#" onClick={this.skillsPage}>Skills</a>
+              <span className="diamond">◆</span>
+              <a key="connect-page" id="connect-page" href="#" onClick={this.connectPage}>Connect</a>
             </nav>;
 
       return (
@@ -47,6 +64,7 @@ var Slide = React.createClass({
             </div>
           </div>
           <footer>
+            {fastNav}
             {navigation}
           </footer>
         </div>
