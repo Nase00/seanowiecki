@@ -8,7 +8,7 @@ html {
 	overflow: scroll;
 }
 body {
-	margin: 0 auto auto;
+	margin: .5em auto auto;
 }
 
 a, .diamond {

@@ -55,6 +55,7 @@ var Slide = React.createClass({displayName: "Slide",
       return (
         React.createElement("div", {id: "wrapper"}, 
           React.createElement("header", null, 
+            fastNav,
             navigation
           ), 
           React.createElement("div", {id: "page"}, 
@@ -65,7 +66,6 @@ var Slide = React.createClass({displayName: "Slide",
             )
           ), 
           React.createElement("footer", null, 
-            fastNav, 
             navigation
           )
         )
