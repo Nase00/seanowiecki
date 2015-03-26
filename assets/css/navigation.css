@@ -15,8 +15,9 @@ nav {
 	font-family: 'Abel', sans-serif;
 	font-size: 1.5em;
 }
-.fast-nav > a {
+.fast-nav > a, .diamond {
 	margin: .25em;
+	color: #ffbf00;
 }
 
 footer {
