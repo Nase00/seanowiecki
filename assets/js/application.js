@@ -37,11 +37,12 @@ var Slide = React.createClass({displayName: "Slide",
           filler = React.createElement("span", {className: "nav-arrow noclick"}, "\u00a0"),
           content =
             React.createElement(SlideContainer, {key: this.state.page, data: slides[this.state.page]}),
+          leftArrow =
+            React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow", href: "#", onClick: this.previousPage}, "«"),
+          rightArrow =
+            React.createElement("a", {key: "next-page", id: "next-page", className: "nav-arrow", href: "#", onClick: this.nextPage}, "»"),
           navigation =
-            React.createElement("nav", null, 
-              this.state.page === 0 ? {filler} : React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow", href: "#", onClick: this.previousPage}, "«"), 
-              this.state.page === AppLength ? {filler} : React.createElement("a", {key: "next-page", id: "next-page", className: "nav-arrow", href: "#", onClick: this.nextPage}, "»")
-            ),
+            React.createElement("nav", null, leftArrow, rightArrow), 
           fastNav =
             React.createElement("nav", {className: "fast-nav"}, 
               React.createElement("a", {key: "project-page", id: "project-page", href: "#", onClick: this.projectPage}, "Projects"), 
