@@ -6,6 +6,7 @@ nav {
 	outline: none;
 	font-family: 'Droid Sans Mono';
 	font-size: 6em;
+	bottom: 1em;
 }
 .nav-arrow:hover {
 	text-decoration: none;
@@ -19,8 +20,18 @@ nav {
 	margin: .25em;
 	color: #ffbf00;
 }
-
+header, footer {
+	padding: 0;
+	left: 0; right: 0;
+	background: #191919;
+}
+header {
+	margin: 0;
+	padding: .5em 0 0 0;
+	border-bottom: 1px solid #ffbf00;
+}
 footer {
 	position: fixed;
 	bottom: 0; left: 0; right: 0;
+	border-top: 1px solid #ffbf00;
 }

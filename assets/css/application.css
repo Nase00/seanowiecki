@@ -8,7 +8,7 @@ html {
 	overflow: scroll;
 }
 body {
-	margin: .5em auto auto;
+	margin: 0;
 }
 
 a, .diamond {
@@ -27,7 +27,7 @@ a:hover {
 	height: 100%;
 }
 #wrapper {
-	margin: auto;
+	margin: 0;
 	width: 100%;
 }
 
@@ -38,7 +38,6 @@ a:hover {
 	left: 0; right: 0;
 	padding: 1em 1em 8em 1em;
 	width: 320px;
-	/*height: 680px;*/
 	font-family: 'Droid Sans Mono';
 	color: #FFFFFF;
 	/*background-color: #000000;*/
