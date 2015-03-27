@@ -2,6 +2,7 @@ nav {
 	text-align: center;
 }
 .nav-arrow {
+	margin: 0 0 1em 0;
 	outline: none;
 	line-height: .45em;
 	font-family: 'Droid Sans Mono';
@@ -38,7 +39,7 @@ header, footer {
 header {
 	margin: 0;
 	padding: .5em 0 0 0;
-	height: 7.5em;
+	height: 6.5em;
 	border-bottom: 1px solid #ffbf00;
 }
 footer {
@@ -59,7 +60,5 @@ footer {
 }
 
 @media only screen and (min-width: 992px) {
-	header {
-		height: 6.5em;
-	}
+
 }
