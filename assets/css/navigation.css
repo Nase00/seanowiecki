@@ -2,11 +2,11 @@ nav {
 	text-align: center;
 }
 .nav-arrow {
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 	outline: none;
 	line-height: .45em;
 	font-family: 'Droid Sans Mono';
-	font-size: 4em;
+	font-size: 5em;
 	transition: all .25s;
 }
 .nav-arrow:hover {
