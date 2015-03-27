@@ -2,11 +2,10 @@ nav {
 	text-align: center;
 }
 .nav-arrow {
-	margin: 0 0 1em 0;
 	outline: none;
 	line-height: .45em;
 	font-family: 'Droid Sans Mono';
-	font-size: 5em;
+	font-size: 4em;
 	transition: all .25s;
 }
 .nav-arrow:hover {
@@ -14,7 +13,7 @@ nav {
 	color: #ffdd7f;
 }
 .nav-arrow:active {
-	font-size: 5.5em;
+	font-size: 3.5em;
 }
 
 #page-number {
