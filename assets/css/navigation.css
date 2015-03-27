@@ -1,11 +1,12 @@
 nav {
+	margin: 0 0 1em 0;
 	text-align: center;
 }
 .nav-arrow {
 	position: absolute;
-	margin: 0 .25em .25em;
+	margin: -.30em .25em .25em;
 	outline: none;
-	line-height: .5em;
+
 	font-family: 'Droid Sans Mono';
 	font-size: 6em;
 	transition: all .25s;
@@ -15,8 +16,8 @@ nav {
 	color: #ffdd7f;
 }
 .nav-arrow:active {
-	font-size: 4em;
-	line-height: .75em;
+	font-size: 5.5em;
+	/*line-height: .75em;*/
 }
 
 .nav-left {
@@ -30,6 +31,7 @@ nav {
 	font-family: 'Norican', cursive;
 	font-size: 3em;
 	color: #ffaa00;
+
 }
 
 .fast-nav {
@@ -47,11 +49,13 @@ header, footer {
 header {
 	margin: 0;
 	padding: .5em 0 0 0;
-	height: 6.5em;
+	height: 7.5em;
 	border-bottom: 1px solid #ffbf00;
 }
 footer {
 	position: fixed;
+	padding: 0 0 .25em 0;
+	height: 3.5em;
 	bottom: 0; left: 0; right: 0;
 	border-top: 1px solid #ffbf00;
 }
@@ -63,4 +67,13 @@ footer {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+@media only screen and (min-width: 992px) {
+	.nav-left {
+		left: 38%;
+	}
+	.nav-right {
+		right: 38%;
+	}
 }

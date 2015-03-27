@@ -44,7 +44,7 @@ var Slide = React.createClass({displayName: "Slide",
           diamond =
             React.createElement("span", {className: "diamond noselect"}, "◆"),
           navigation =
-            React.createElement("nav", null, leftArrow, React.createElement("span", {id: "page-number"}, this.state.page), rightArrow), 
+            React.createElement("nav", null, leftArrow, React.createElement("span", {id: "page-number", className: "noselect"}, this.state.page + 1), rightArrow), 
           fastNav =
             React.createElement("nav", {className: "fast-nav"}, 
               React.createElement("a", {key: "project-page", id: "project-page", className: "noselect", href: "#", onClick: this.projectPage}, "Projects"), 

@@ -1,12 +1,12 @@
 img {
 	display: block;
-	margin: .25em;
+	margin: .25em auto auto;
 	height: 182px;
 	width: 290px;
 	border: 1px solid #ffbf00;
 }
 img.preview {
-	width: 100%;
+	width: 290px;
 }
 img#me {
 	width: 18em; height: auto;
