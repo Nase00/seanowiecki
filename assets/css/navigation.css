@@ -20,10 +20,10 @@ nav {
 }
 
 .nav-left {
-	left: 30%;
+	left: 20%;
 }
 .nav-right {
-	right: 30%;
+	right: 20%;
 }
 
 #page-number {
@@ -47,7 +47,7 @@ header, footer {
 header {
 	margin: 0;
 	padding: .5em 0 0 0;
-	height: 5.75em;
+	height: 6.5em;
 	border-bottom: 1px solid #ffbf00;
 }
 footer {
