@@ -15,15 +15,15 @@ nav {
 	color: #ffdd7f;
 }
 .nav-arrow:active {
-	/*font-size: 4em;*/
-	line-height: .65em;
+	font-size: 4em;
+	line-height: .75em;
 }
 
 .nav-left {
-	left: 5em;
+	left: 30%;
 }
 .nav-right {
-	right: 5em;
+	right: 30%;
 }
 
 #page-number {
