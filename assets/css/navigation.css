@@ -16,13 +16,6 @@ nav {
 	font-size: 5.5em;
 }
 
-.nav-left {
-	left: 20%;
-}
-.nav-right {
-	right: 20%;
-}
-
 #page-number {
 	font-family: 'Norican', cursive;
 	font-size: 3.5em;
@@ -45,7 +38,7 @@ header, footer {
 header {
 	margin: 0;
 	padding: .5em 0 0 0;
-	height: 6.5em;
+	height: 7.5em;
 	border-bottom: 1px solid #ffbf00;
 }
 footer {
@@ -66,10 +59,7 @@ footer {
 }
 
 @media only screen and (min-width: 992px) {
-	.nav-left {
-		left: 38%;
-	}
-	.nav-right {
-		right: 38%;
+	header {
+		height: 6.5em;
 	}
 }
