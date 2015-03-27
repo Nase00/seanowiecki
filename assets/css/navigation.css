@@ -6,7 +6,7 @@ nav {
 	outline: none;
 	line-height: .45em;
 	font-family: 'Droid Sans Mono';
-	font-size: 5em;
+	font-size: 4em;
 	transition: all .25s;
 }
 .nav-arrow:hover {
