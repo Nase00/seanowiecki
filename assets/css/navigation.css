@@ -1,14 +1,11 @@
 nav {
-	margin: 0 0 1em 0;
 	text-align: center;
 }
 .nav-arrow {
-	position: absolute;
-	margin: -.30em .25em .25em;
 	outline: none;
-
+	line-height: .45em;
 	font-family: 'Droid Sans Mono';
-	font-size: 6em;
+	font-size: 5em;
 	transition: all .25s;
 }
 .nav-arrow:hover {
@@ -17,7 +14,6 @@ nav {
 }
 .nav-arrow:active {
 	font-size: 5.5em;
-	/*line-height: .75em;*/
 }
 
 .nav-left {
@@ -29,7 +25,7 @@ nav {
 
 #page-number {
 	font-family: 'Norican', cursive;
-	font-size: 3em;
+	font-size: 3.5em;
 	color: #ffaa00;
 
 }
@@ -49,13 +45,13 @@ header, footer {
 header {
 	margin: 0;
 	padding: .5em 0 0 0;
-	height: 7.5em;
+	height: 6.5em;
 	border-bottom: 1px solid #ffbf00;
 }
 footer {
 	position: fixed;
 	padding: 0 0 .25em 0;
-	height: 3.5em;
+	height: 4em;
 	bottom: 0; left: 0; right: 0;
 	border-top: 1px solid #ffbf00;
 }
