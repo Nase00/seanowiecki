@@ -38,13 +38,13 @@ var Slide = React.createClass({displayName: "Slide",
           content =
             React.createElement(SlideContainer, {key: this.state.page, data: slides[this.state.page]}),
           leftArrow =
-            this.state.page === 0 ? filler : React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow noselect", href: "#", onClick: this.previousPage}, "«"),
+            this.state.page === 0 ? filler : React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow nav-left noselect", href: "#", onClick: this.previousPage}, "«"),
           rightArrow =
-            this.state.page === AppLength ? filler : React.createElement("a", {key: "next-page", id: "next-page", className: "nav-arrow noselect", href: "#", onClick: this.nextPage}, "»"),
+            this.state.page === AppLength ? filler : React.createElement("a", {key: "next-page", id: "next-page", className: "nav-arrow nav-right noselect", href: "#", onClick: this.nextPage}, "»"),
           diamond =
             React.createElement("span", {className: "diamond noselect"}, "◆"),
           navigation =
-            React.createElement("nav", null, leftArrow, rightArrow), 
+            React.createElement("nav", null, leftArrow, React.createElement("span", {id: "page-number"}, this.state.page), rightArrow), 
           fastNav =
             React.createElement("nav", {className: "fast-nav"}, 
               React.createElement("a", {key: "project-page", id: "project-page", className: "noselect", href: "#", onClick: this.projectPage}, "Projects"), 

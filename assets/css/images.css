@@ -1,0 +1,39 @@
+img {
+	display: block;
+	margin: .25em;
+	height: 182px;
+	width: 290px;
+	border: 1px solid #ffbf00;
+}
+img.preview {
+	width: 100%;
+}
+img#me {
+	width: 18em; height: auto;
+}
+
+img#odyssey-preview {
+	background: url('../../assets/images/odyssey_preview.png');
+	transition: all .75s;
+}
+img#odyssey-preview:hover {
+	background: url('../../assets/images/odyssey_code_preview.png');
+}
+img#horizon-preview {
+	background: url('../../assets/images/horizon_preview.png');
+	transition: all .75s;
+}
+img#horizon-preview:hover {
+	background: url('../../assets/images/horizon_code_preview.png');
+}
+img#atomic6-preview {
+	background: url('../../assets/images/atomic6_preview.png');
+	transition: all .75s;
+}
+img#atomic6-preview:hover {
+	background: url('../../assets/images/atomic6_code_preview.png');
+}
+
+img.preload {
+	height: 0; width: 0; border: 0;
+}

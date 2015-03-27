@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 @import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Norican);
 
 html {
 	background: #3f3f3f;
@@ -15,9 +16,13 @@ a, .diamond {
 	color: #ffaa00;
 	text-decoration: none;
 	outline: none;
+	transition: all .25s;
 }
 a:hover {
-	text-decoration: underline;
+	color: #ffdd7f;
+}
+a:active {
+	color: #ffaa00;
 }
 .noclick {
 	pointer-events: none;
@@ -58,13 +63,6 @@ h1 {
 li {
 	margin: .5em;
 	list-style: square;
-}
-
-img.preview, img {
-	display: block;
-	margin: .25em;
-	width: 100%;
-	border: 1px solid #ffbf00;
 }
 
 a.link {
