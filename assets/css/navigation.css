@@ -62,10 +62,9 @@ footer {
 
 @media only screen and (min-width: 992px) and (min-height: 825px) {
 	.nav-arrow {
-		position: absolute;
-		/*margin: 0 2em 0 2em;*/
+		position: fixed;
 		font-size: 10em;
-		top: -750px;
+		top: 200px;
 	}
 	.nav-arrow:active {
 		font-size: 9.5em;
