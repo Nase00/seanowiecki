@@ -41,9 +41,8 @@ var Slide = React.createClass({displayName: "Slide",
     },
     render: function() {
       var key = 0,
-          filler = React.createElement("span", {className: "nav-arrow noclick"}, "\u00a0"),
-          content =
-            React.createElement(SlideContainer, {key: this.state.page, data: slides[this.state.page]}),
+          filler =
+            React.createElement("span", {className: "nav-arrow noclick"}, "\u00a0"),
           leftArrow =
             this.state.page === 0 ? filler : React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow nav-left noselect", href: "#", onClick: this.previousPage}, "«"),
           rightArrow =
@@ -69,9 +68,9 @@ var Slide = React.createClass({displayName: "Slide",
             fastNav
           ), 
           React.createElement("div", {id: "page"}, 
-            React.createElement("div", null, 
-              React.createElement(ReactCSSTransitionGroup, {transitionName: content.key >= this.state.previousPage ? "slide-left" : "slide-right"}, 
-                content
+            React.createElement("div", {id: "slide"}, 
+              React.createElement(ReactCSSTransitionGroup, {transitionName: this.state.page >= this.state.previousPage ? "slide-left" : "slide-right"}, 
+                slides[this.state.page]
               )
             )
           ), 
@@ -82,19 +81,6 @@ var Slide = React.createClass({displayName: "Slide",
       );
     }
   });
-
-var SlideContainer = React.createClass({displayName: "SlideContainer",
-  getInitialState: function() {
-    return {
-      mounted: false
-    };
-  },
-  render: function() {
-    return (
-      React.createElement("div", {id: "slide"}, this.props.data)
-    );
-  }
-})
 
 React.render(React.createElement(Slide, null), document.getElementById("anchor"));
 },{"./slides.jsx":2,"react/addons":4}],2:[function(require,module,exports){

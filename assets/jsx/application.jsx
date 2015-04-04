@@ -40,9 +40,8 @@ var Slide = React.createClass({
     },
     render: function() {
       var key = 0,
-          filler = <span className="nav-arrow noclick">{"\u00a0"}</span>,
-          content =
-            <ReactCSSTransitionGroup transitionName={this.state.page >= this.state.previousPage ? "slide-left" : "slide-right"}><SlideContainer key={this.state.page} data={slides[this.state.page]} /></ReactCSSTransitionGroup>,
+          filler =
+            <span className="nav-arrow noclick">{"\u00a0"}</span>,
           leftArrow =
             this.state.page === 0 ? filler : <a key="previous-page" id="previous-page" className="nav-arrow nav-left noselect" href="#" onClick={this.previousPage}>«</a>,
           rightArrow =
@@ -68,10 +67,10 @@ var Slide = React.createClass({
             {fastNav}
           </header>
           <div id="page">
-            <div>
-              
-                {content}
-              
+            <div id="slide">
+              <ReactCSSTransitionGroup transitionName={this.state.page >= this.state.previousPage ? "slide-left" : "slide-right"}>
+                {slides[this.state.page]}
+              </ReactCSSTransitionGroup>
             </div>
           </div>
           <footer>
@@ -81,18 +80,5 @@ var Slide = React.createClass({
       );
     }
   });
-
-var SlideContainer = React.createClass({
-  getInitialState: function() {
-    return {
-      mounted: false
-    };
-  },
-  render: function() {
-    return (
-      <div id="slide">{this.props.data}</div>
-    );
-  }
-})
 
 React.render(<Slide/>, document.getElementById("anchor"));
