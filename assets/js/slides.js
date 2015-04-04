@@ -55,9 +55,9 @@ var slides = [
     React.createElement("ul", null, 
       React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Languages:"), " Ruby, JavaScript, HTML5, CSS3"), 
       React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Databases:"), " Postgresql, Neo4j"), 
-      React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Frameworks and Libraries:"), " Rails, jQuery, Underscore, React"), 
+      React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Frameworks and Libraries:"), " Rails, React, jQuery, Underscore"), 
       React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Testing:"), " Rspec, Jasmine"), 
-      React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Hardware:"), " Computer assembly and local networking")
+      React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Other:"), " Git, Rake, Grunt")
     )
   ),
   React.createElement("div", {key: slideKey++}, 
