@@ -9,8 +9,7 @@ var React = require('react/addons'),
 		ReactTransitionGroup = React.addons.TransitionGroup,
     slides = require('./slides.jsx'),
 		AppLength = slides.length - 1
-    paginationArray = Array.apply(null, {length: AppLength + 1}).map(Number.call, Number);
-    paginationArray.shift();
+    paginationArray = Array.apply(null, {length: AppLength}).map(Number.call, Number);
 
 // Set pages
 var projectPage = 2,
@@ -22,8 +21,8 @@ var Slide = React.createClass({displayName: "Slide",
   	getInitialState: function() {
       return {
         mounted: false,
-        page: 1,
-        previousPage: 1
+        page: 0,
+        previousPage: 0
       };
     },
     componentDidMount: function() {
@@ -37,14 +36,14 @@ var Slide = React.createClass({displayName: "Slide",
     },
     previousPage: function() {
       this.setState({previousPage: this.state.page});
-    	this.state.page === 1 ? null : this.setState({page: this.state.page - 1});
+    	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
     skipToPage: function(n) {
       this.setState({page: n});
     },
     render: function() {
-      var key = 0,
-          page = this.state.page,
+      var self = this,
+          key = 0,
           filler =
             React.createElement("span", {className: "nav-arrow noclick"}, "\u00a0"),
           leftArrow =
@@ -56,7 +55,7 @@ var Slide = React.createClass({displayName: "Slide",
           pagination =
             React.createElement("span", {id: "page-numbers", className: "noselect"}, 
               paginationArray.map(function(n) {
-                return n == page ? React.createElement("a", {className: "current-page", href: "#"}, n) : React.createElement("a", {href: "#"}, n)
+                return n == self.state.page ? React.createElement("a", {key: n, className: "current-page", href: "#"}, n + 1) : React.createElement("a", {key: n, href: "#", onClick: self.skipToPage.bind(null, n)}, n + 1)
               })
             )
           navigation =
