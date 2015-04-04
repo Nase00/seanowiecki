@@ -22,14 +22,8 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "./assets/css/application.css": "./assets/less/application.less"
-        },
-      },
-    },
-    karma: {
-      unit: {
-        options: {
-          files: ['test/**/*.js']
+          "./assets/css/application.css": "./assets/less/application.less",
+          "./assets/css/navigation.css": "./assets/less/navigation.less"
         },
       },
     },
