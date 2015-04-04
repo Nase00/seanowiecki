@@ -79,15 +79,18 @@ a.link:nth-child(2) {
 	right: 0;
 }
 a.link:hover {
-	width: 40%;
+	width: 30%;
 	color: #ffbf00;
 	text-decoration: none;
 	background-color: #191919;
 	border: 1px solid #ffbf00;
 }
+a.link:hover a {
+	width: 1px;
+}
 a.project {
 	display: inline-block;
-	width: 30%;
+	width: 21%;
 }
 a.connect {
 	display: block;
