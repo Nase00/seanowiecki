@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         transform: [ require('grunt-react').browserify ]
       },
       app: {
-        src: 'assets/jsx/application.jsx',
+        src: 'build/jsx/application.jsx',
         dest: 'assets/js/application.js'
       }
     },
@@ -27,8 +27,8 @@ module.exports = function(grunt) {
       combined_file_output: {
         files: {
           'assets/js/application.js': [
-            'assets/jsx/application.jsx',
-            'assets/jsx/slides.jsx'
+            'build/jsx/application.jsx',
+            'build/jsx/slides.jsx'
           ]
         }
       },
@@ -40,13 +40,13 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "./assets/css/application.css": "./assets/less/application.less",
-          "./assets/css/navigation.css": "./assets/less/navigation.less"
+          "./assets/css/application.css": "./build/less/application.less",
+          "./assets/css/navigation.css": "./build/less/navigation.less"
         },
       },
     },
     watch: {
-      files: ["./assets/less/*.less", "./assets/jsx/*.jsx"],
+      files: ["./build/**/*"],
       tasks: ["browserify", "less"],
     },
   });
