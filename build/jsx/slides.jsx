@@ -18,7 +18,7 @@ var React = require('react/addons'),
       <div key={slideKey++}>
         <h3>My current project.</h3>
         <a href="http://divvy-odyssey.heroku.com" target="_blank">
-          <img id="odyssey-preview" className="preview" src="assets/images/odyssey_preview.png" />
+          <img id="odyssey-preview" className="preview" />
         </a>
         <h4 className="project-title">Odyssey</h4>
         <div className="links">
@@ -32,7 +32,7 @@ var React = require('react/addons'),
       <div key={slideKey++}>
       <h3>Some of my past work.</h3>
         <a href="http://beyondyourhorizon.heroku.com" target="_blank">
-          <img id="horizon-preview" className="preview" src="assets/images/horizon_preview.png" />
+          <img id="horizon-preview" className="preview" />
         </a>
         <h4 className="project-title">Horizon</h4>
         <div className="links">
@@ -46,7 +46,7 @@ var React = require('react/addons'),
       <div key={slideKey++}>
       <h3>Some more of my past work.</h3>
         <a href="http://atomic6.heroku.com" target="_blank">
-          <img id="atomic6-preview" className="preview" src="assets/images/atomic6_preview.png" />
+          <img id="atomic6-preview" className="preview" />
         </a>
         <h4 className="project-title">Atomic6</h4>
         <div className="links">

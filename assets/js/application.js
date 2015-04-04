@@ -104,7 +104,7 @@ var React = require('react/addons'),
       React.createElement("div", {key: slideKey++}, 
         React.createElement("h3", null, "My current project."), 
         React.createElement("a", {href: "http://divvy-odyssey.heroku.com", target: "_blank"}, 
-          React.createElement("img", {id: "odyssey-preview", className: "preview", src: "assets/images/odyssey_preview.png"})
+          React.createElement("img", {id: "odyssey-preview", className: "preview"})
         ), 
         React.createElement("h4", {className: "project-title"}, "Odyssey"), 
         React.createElement("div", {className: "links"}, 
@@ -118,7 +118,7 @@ var React = require('react/addons'),
       React.createElement("div", {key: slideKey++}, 
       React.createElement("h3", null, "Some of my past work."), 
         React.createElement("a", {href: "http://beyondyourhorizon.heroku.com", target: "_blank"}, 
-          React.createElement("img", {id: "horizon-preview", className: "preview", src: "assets/images/horizon_preview.png"})
+          React.createElement("img", {id: "horizon-preview", className: "preview"})
         ), 
         React.createElement("h4", {className: "project-title"}, "Horizon"), 
         React.createElement("div", {className: "links"}, 
@@ -132,7 +132,7 @@ var React = require('react/addons'),
       React.createElement("div", {key: slideKey++}, 
       React.createElement("h3", null, "Some more of my past work."), 
         React.createElement("a", {href: "http://atomic6.heroku.com", target: "_blank"}, 
-          React.createElement("img", {id: "atomic6-preview", className: "preview", src: "assets/images/atomic6_preview.png"})
+          React.createElement("img", {id: "atomic6-preview", className: "preview"})
         ), 
         React.createElement("h4", {className: "project-title"}, "Atomic6"), 
         React.createElement("div", {className: "links"}, 
