@@ -1,39 +1,28 @@
-.slide-left-enter, .slide-right-enter {
-  box-sizing: border-box;
+.slide-left-enter, .slide-right-enter {  
   position: absolute;
+  right: 0; left: 0;
   opacity: 0.01;
-  transition: all .25s;
+  transition: opacity .25s ease-in;
 }
-.slide-left-enter.slide-left-enter-active, .slide-right-enter.slide-right-enter-active {
-  box-sizing: border-box;
-  position: absolute;
+.slide-left-enter.slide-left-enter-active, .slide-right-enter.slide-right-enter-active {  
   opacity: 1;
-  transition: all .25s;
 }
-.slide-left-leave {
-  box-sizing: border-box;
+.slide-left-leave {  
   position: absolute;
+  right: 0; left: 0;
   opacity: 1;
-  transition: all .25s;
+  transition: opacity .25s ease-in;
 }
 .slide-left-leave.slide-left-leave-active {
-  box-sizing: border-box;
   position: absolute;
-  opacity: 0.5;
-  transform: translateX(-100em);
-  transition: all .75s;
+  opacity: 0.01;
+  transition: opacity .25s ease-in;
 }
 
-.slide-right-leave {
-  box-sizing: border-box;
-  position: absolute;
+.slide-right-leave {  
   opacity: 1;
-  transition: all .25s;
 }
-.slide-right-leave.slide-right-leave-active {
-  box-sizing: border-box;
-  position: absolute;
-  opacity: 0.5;
-  transform: translateX(100em);
-  transition: all .75s;
+.slide-right-leave.slide-right-leave-active {  
+  opacity: 0.01;
+  transition: opacity .25s ease-in;
 }
