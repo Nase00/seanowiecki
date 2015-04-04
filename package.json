@@ -1,0 +1,27 @@
+{
+  "name": "nase00.github.io",
+  "version": "0.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nase00/nase00.github.io.git"
+  },
+  "author": "Sean Owiecki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nase00/nase00.github.io/issues"
+  },
+  "homepage": "https://github.com/Nase00/nase00.github.io",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.10.1",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "matchdep": "^0.3.0",
+    "react": "^0.13.1"
+  }
+}
