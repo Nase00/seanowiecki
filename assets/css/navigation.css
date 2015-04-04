@@ -60,6 +60,19 @@ footer {
     user-select: none;
 }
 
-@media only screen and (min-width: 992px) {
-
+@media only screen and (min-width: 992px) and (min-height: 825px) {
+	.nav-arrow {
+		position: fixed;
+		font-size: 10em;
+		top: 200px;
+	}
+	.nav-arrow:active {
+		font-size: 9.5em;
+	}
+	.nav-right {
+		left: 75%;
+	}
+	.nav-left {
+		right: 75%;
+	}
 }
