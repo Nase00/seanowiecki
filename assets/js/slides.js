@@ -13,7 +13,7 @@ var slides = [
   ),
   React.createElement("div", {key: slideKey++}, 
     React.createElement("h3", null, "My current project."), 
-    React.createElement("a", {href: "http://atomic6.heroku.com", target: "_blank"}, 
+    React.createElement("a", {href: "http://divvy-odyssey.heroku.com", target: "_blank"}, 
       React.createElement("img", {id: "odyssey-preview", className: "preview"})
     ), 
     React.createElement("h4", {className: "project-title"}, "Odyssey"), 
