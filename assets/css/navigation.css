@@ -60,7 +60,7 @@ footer {
     user-select: none;
 }
 
-@media only screen and (min-width: 992px) and (min-height: 825px) {
+@media only screen and (min-width: 1200px) and (min-height: 825px) {
 	.nav-arrow {
 		position: fixed;
 		font-size: 10em;
