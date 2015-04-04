@@ -8,8 +8,7 @@ var React = require('react/addons'),
 		ReactTransitionGroup = React.addons.TransitionGroup,
     slides = require('./slides.jsx'),
 		AppLength = slides.length - 1
-    paginationArray = Array.apply(null, {length: AppLength + 1}).map(Number.call, Number);
-    paginationArray.shift();
+    paginationArray = Array.apply(null, {length: AppLength}).map(Number.call, Number);
 
 // Set pages
 var projectPage = 2,
@@ -42,7 +41,8 @@ var Slide = React.createClass({
       this.setState({page: n});
     },
     render: function() {
-      var key = 0,
+      var self = this,
+          key = 0,
           filler =
             <span className="nav-arrow noclick">{"\u00a0"}</span>,
           leftArrow =
@@ -52,12 +52,14 @@ var Slide = React.createClass({
           diamond =
             <span className="diamond noselect">◆</span>
           pagination =
-            <div>
-              {paginationArray}
-            </div>
+            <span id="page-numbers" className="noselect">
+              {paginationArray.map(function(n) {
+                return n == self.state.page ? <a key={n} className="current-page" href="#">{n + 1}</a> : <a key={n} href="#" onClick={self.skipToPage.bind(null, n)}>{n + 1}</a>
+              })}
+            </span>
           navigation =
             <nav>
-              {leftArrow} <span id="page-number" className="noselect">{this.state.page + 1}</span> {rightArrow}
+              {leftArrow, pagination, rightArrow}
             </nav>,
           fastNav =
             <nav className="fast-nav">

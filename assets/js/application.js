@@ -22,8 +22,8 @@ var Slide = React.createClass({displayName: "Slide",
   	getInitialState: function() {
       return {
         mounted: false,
-        page: 0,
-        previousPage: 0
+        page: 1,
+        previousPage: 1
       };
     },
     componentDidMount: function() {
@@ -37,13 +37,14 @@ var Slide = React.createClass({displayName: "Slide",
     },
     previousPage: function() {
       this.setState({previousPage: this.state.page});
-    	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
+    	this.state.page === 1 ? null : this.setState({page: this.state.page - 1});
     },
     skipToPage: function(n) {
       this.setState({page: n});
     },
     render: function() {
       var key = 0,
+          page = this.state.page,
           filler =
             React.createElement("span", {className: "nav-arrow noclick"}, "\u00a0"),
           leftArrow =
@@ -53,12 +54,14 @@ var Slide = React.createClass({displayName: "Slide",
           diamond =
             React.createElement("span", {className: "diamond noselect"}, "◆")
           pagination =
-            React.createElement("div", null, 
-              paginationArray
+            React.createElement("span", {id: "page-numbers", className: "noselect"}, 
+              paginationArray.map(function(n) {
+                return n == page ? React.createElement("a", {className: "current-page", href: "#"}, n) : React.createElement("a", {href: "#"}, n)
+              })
             )
           navigation =
             React.createElement("nav", null, 
-              leftArrow, " ", React.createElement("span", {id: "page-number", className: "noselect"}, this.state.page + 1), " ", rightArrow
+              leftArrow, pagination, rightArrow
             ),
           fastNav =
             React.createElement("nav", {className: "fast-nav"}, 

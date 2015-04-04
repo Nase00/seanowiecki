@@ -6,7 +6,7 @@ nav .nav-arrow {
   line-height: .45em;
   font-family: 'Droid Sans Mono', Helvetica;
   font-size: 4em;
-  transition: all .25s;
+  transition: all 0.25s;
 }
 nav .nav-arrow:hover {
   text-decoration: none;
@@ -15,10 +15,26 @@ nav .nav-arrow:hover {
 nav .nav-arrow:active {
   font-size: 3.5em;
 }
-nav #page-number {
+nav #page-numbers {
+  width: 100%;
   font-family: 'Norican', Arial;
-  font-size: 3.5em;
   color: #ffaa00;
+}
+nav #page-numbers a {
+  display: inline;
+  vertical-align: top;
+  margin: .05em;
+  height: 4em;
+  font-size: 2em;
+  transition: all .25s;
+}
+nav #page-numbers a.current-page {
+  position: relative;
+  top: -0.25em;
+  font-size: 3em;
+}
+nav span {
+  margin: .25em;
 }
 nav.fast-nav {
   font-family: 'Abel', sans-serif;
@@ -45,8 +61,8 @@ header {
   border-bottom: 1px solid #ffbf00;
 }
 footer {
-  padding: 0 0 .25em 0;
-  height: 4em;
+  padding: .25em 0 .25em 0;
+  height: 2.75em;
   bottom: 0;
   left: 0;
   right: 0;
