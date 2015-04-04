@@ -43,7 +43,7 @@ var Slide = React.createClass({displayName: "Slide",
       var key = 0,
           filler = React.createElement("span", {className: "nav-arrow noclick"}, "\u00a0"),
           content =
-            React.createElement(ReactCSSTransitionGroup, {transitionName: content.key >= this.state.previousPage ? "slide-left" : "slide-right"}, React.createElement(SlideContainer, {key: this.state.page, data: slides[this.state.page]})),
+            React.createElement(SlideContainer, {key: this.state.page, data: slides[this.state.page]}),
           leftArrow =
             this.state.page === 0 ? filler : React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow nav-left noselect", href: "#", onClick: this.previousPage}, "«"),
           rightArrow =
@@ -70,9 +70,9 @@ var Slide = React.createClass({displayName: "Slide",
           ), 
           React.createElement("div", {id: "page"}, 
             React.createElement("div", null, 
-              
+              React.createElement(ReactCSSTransitionGroup, {transitionName: content.key >= this.state.previousPage ? "slide-left" : "slide-right"}, 
                 content
-              
+              )
             )
           ), 
           React.createElement("footer", null, 
