@@ -8,7 +8,7 @@ var React = require('react/addons'),
 		ReactTransitionGroup = React.addons.TransitionGroup,
     slides = require('./slides.jsx'),
 		AppLength = slides.length - 1
-    paginationArray = Array.apply(null, {length: AppLength}).map(Number.call, Number);
+    paginationArray = Array.apply(null, {length: AppLength + 1}).map(Number.call, Number);
 
 // Set pages
 var projectPage = 2,
