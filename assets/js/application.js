@@ -43,7 +43,7 @@ var Slide = React.createClass({displayName: "Slide",
       var key = 0,
           filler = React.createElement("span", {className: "nav-arrow noclick"}, "\u00a0"),
           content =
-            React.createElement(SlideContainer, {key: this.state.page, data: slides[this.state.page]}),
+            React.createElement(ReactCSSTransitionGroup, {transitionName: content.key >= this.state.previousPage ? "slide-left" : "slide-right"}, React.createElement(SlideContainer, {key: this.state.page, data: slides[this.state.page]})),
           leftArrow =
             this.state.page === 0 ? filler : React.createElement("a", {key: "previous-page", id: "previous-page", className: "nav-arrow nav-left noselect", href: "#", onClick: this.previousPage}, "«"),
           rightArrow =
@@ -70,9 +70,9 @@ var Slide = React.createClass({displayName: "Slide",
           ), 
           React.createElement("div", {id: "page"}, 
             React.createElement("div", null, 
-              React.createElement(ReactCSSTransitionGroup, {transitionName: content.key >= this.state.previousPage ? "slide-left" : "slide-right"}, 
+              
                 content
-              )
+              
             )
           ), 
           React.createElement("footer", null, 
@@ -108,8 +108,11 @@ var React = require('react/addons'),
       ),
     	React.createElement("div", null, 
         React.createElement("h3", null, "A little about me."), 
-        React.createElement("p", null, "I'm passionate about creating and problem-solving, whether it be on back-end systems or front-end user experiences. I am restless when it comes to programming, constantly striving to solve problems while also giving a great deal of attention to the cleanliness and convention of my code. It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community."), 
-
+        React.createElement("p", null, 
+          "I'm passionate about creating and problem-solving, whether it be on back-end systems or front-end user experiences." + ' ' +
+          "I am restless when it comes to programming, constantly striving to solve problems while also giving a great deal of attention to the cleanliness and convention of my code." + ' ' +
+          "It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community."
+        ), 
         React.createElement("p", null, "When I'm not coding, I'm ripping off the \"warranty void if tampered with\" stickers on my electronics. I enjoy customizing and getting the most performance out of software and hardware.")
       ),
       React.createElement("div", {key: slideKey++}, 

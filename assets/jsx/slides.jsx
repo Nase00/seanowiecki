@@ -8,8 +8,11 @@ var React = require('react/addons'),
       </div>,
     	<div>
         <h3>A little about me.</h3>
-        <p>I'm passionate about creating and problem-solving, whether it be on back-end systems or front-end user experiences. I am restless when it comes to programming, constantly striving to solve problems while also giving a great deal of attention to the cleanliness and convention of my code. It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community.</p>
-
+        <p>
+          I'm passionate about creating and problem-solving, whether it be on back-end systems or front-end user experiences.
+          I am restless when it comes to programming, constantly striving to solve problems while also giving a great deal of attention to the cleanliness and convention of my code.
+          It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community.
+        </p>
         <p>When I'm not coding, I'm ripping off the "warranty void if tampered with" stickers on my electronics. I enjoy customizing and getting the most performance out of software and hardware.</p>
       </div>,
       <div key={slideKey++}>

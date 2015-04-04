@@ -42,7 +42,7 @@ var Slide = React.createClass({
       var key = 0,
           filler = <span className="nav-arrow noclick">{"\u00a0"}</span>,
           content =
-            <SlideContainer key={this.state.page} data={slides[this.state.page]} />,
+            <ReactCSSTransitionGroup transitionName={content.key >= this.state.previousPage ? "slide-left" : "slide-right"}><SlideContainer key={this.state.page} data={slides[this.state.page]} /></ReactCSSTransitionGroup>,
           leftArrow =
             this.state.page === 0 ? filler : <a key="previous-page" id="previous-page" className="nav-arrow nav-left noselect" href="#" onClick={this.previousPage}>«</a>,
           rightArrow =
@@ -69,9 +69,9 @@ var Slide = React.createClass({
           </header>
           <div id="page">
             <div>
-              <ReactCSSTransitionGroup transitionName={content.key >= this.state.previousPage ? "slide-left" : "slide-right"}>
+              
                 {content}
-              </ReactCSSTransitionGroup>
+              
             </div>
           </div>
           <footer>
