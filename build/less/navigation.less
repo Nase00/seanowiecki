@@ -1,36 +1,48 @@
+@primary-link: #ffaa00;
+@hover-link: #ffbf00;
+@active-link: #ffaa00;
+
+@primary-background: #3f3f3f;
+@secondary-background: #191919;
+
+@primary-font: 'Droid Sans Mono', Helvetica;
+@secondary-font: 'Abel', sans-serif;
+@tertiary-font: 'Norican', Arial;
+
 nav {
 	text-align: center;
-}
-.nav-arrow {
-	outline: none;
-	line-height: .45em;
-	font-family: 'Droid Sans Mono';
-	font-size: 4em;
-	transition: all .25s;
-}
-.nav-arrow:hover {
-	text-decoration: none;
-	color: #ffdd7f;
-}
-.nav-arrow:active {
-	font-size: 3.5em;
-}
+	.nav-arrow {
+		outline: none;
+		line-height: .45em;
+		font-family: @primary-font;
+		font-size: 4em;
+		transition: all .25s;
+	}
+	.nav-arrow:hover {
+		text-decoration: none;
+		color: #ffdd7f;
+	}
+	.nav-arrow:active {
+		font-size: 3.5em;
+	}
 
-#page-number {
-	font-family: 'Norican', cursive;
-	font-size: 3.5em;
-	color: #ffaa00;
+	#page-number {
+		font-family: @tertiary-font;
+		font-size: 3.5em;
+		color: #ffaa00;
 
+	}
 }
-
-.fast-nav {
-	font-family: 'Abel', sans-serif;
+nav.fast-nav {
+	font-family: @secondary-font;
 	font-size: 1.5em;
+	a, .diamond {
+		margin: .25em;
+	}
 }
-.fast-nav > a, .diamond {
-	margin: .25em;
-}
+
 header, footer {
+	z-index: 200;
 	position: fixed;
 	margin: 0;
 	padding: 0;
@@ -38,7 +50,6 @@ header, footer {
 	background: #191919;
 }
 header {
-	z-index: 200;
 	padding: .5em;
 	top: 0;
 	height: 1.9em;
@@ -61,18 +72,20 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) and (min-height: 825px) {
-	.nav-arrow {
-		position: fixed;
-		font-size: 10em;
-		top: 200px;
-	}
-	.nav-arrow:active {
-		font-size: 9.5em;
-	}
-	.nav-right {
-		left: 75%;
-	}
-	.nav-left {
-		right: 75%;
+	nav {
+		.nav-arrow {
+			position: fixed;
+			font-size: 10em;
+			top: 200px;
+		}
+		.nav-arrow:active {
+			font-size: 9.5em;
+		}
+		.nav-right {
+			left: 75%;
+		}
+		.nav-left {
+			right: 75%;
+		}
 	}
 }

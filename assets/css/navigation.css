@@ -1,35 +1,36 @@
 nav {
   text-align: center;
 }
-.nav-arrow {
+nav .nav-arrow {
   outline: none;
   line-height: .45em;
-  font-family: 'Droid Sans Mono';
+  font-family: 'Droid Sans Mono', Helvetica;
   font-size: 4em;
   transition: all .25s;
 }
-.nav-arrow:hover {
+nav .nav-arrow:hover {
   text-decoration: none;
   color: #ffdd7f;
 }
-.nav-arrow:active {
+nav .nav-arrow:active {
   font-size: 3.5em;
 }
-#page-number {
-  font-family: 'Norican', cursive;
+nav #page-number {
+  font-family: 'Norican', Arial;
   font-size: 3.5em;
   color: #ffaa00;
 }
-.fast-nav {
+nav.fast-nav {
   font-family: 'Abel', sans-serif;
   font-size: 1.5em;
 }
-.fast-nav > a,
-.diamond {
+nav.fast-nav a,
+nav.fast-nav .diamond {
   margin: .25em;
 }
 header,
 footer {
+  z-index: 200;
   position: fixed;
   margin: 0;
   padding: 0;
@@ -38,7 +39,6 @@ footer {
   background: #191919;
 }
 header {
-  z-index: 200;
   padding: .5em;
   top: 0;
   height: 1.9em;
@@ -61,18 +61,18 @@ footer {
   user-select: none;
 }
 @media only screen and (min-width: 1200px) and (min-height: 825px) {
-  .nav-arrow {
+  nav .nav-arrow {
     position: fixed;
     font-size: 10em;
     top: 200px;
   }
-  .nav-arrow:active {
+  nav .nav-arrow:active {
     font-size: 9.5em;
   }
-  .nav-right {
+  nav .nav-right {
     left: 75%;
   }
-  .nav-left {
+  nav .nav-left {
     right: 75%;
   }
 }

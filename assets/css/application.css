@@ -7,7 +7,7 @@ html {
   background-size: 100%;
   overflow: scroll;
 }
-body {
+html body {
   margin: 0;
 }
 a,
@@ -18,7 +18,7 @@ a,
   transition: all .25s;
 }
 a:hover {
-  color: #ffdd7f;
+  color: #ffbf00;
 }
 a:active {
   color: #ffaa00;
@@ -40,7 +40,7 @@ a:active {
   left: 0;
   right: 0;
   width: 320px;
-  font-family: 'Droid Sans Mono';
+  font-family: 'Droid Sans Mono', Helvetica;
   color: #FFFFFF;
 }
 .title,

@@ -2,12 +2,21 @@
  * @jsx React.DOM
  */
 
+// Dependencies
 var React = require('react/addons'),
     ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
 		ReactTransitionGroup = React.addons.TransitionGroup,
     slides = require('./slides.jsx'),
-		AppLength = slides.length - 1;
+		AppLength = slides.length - 1
+    paginationArray = Array.apply(null, {length: AppLength + 1}).map(Number.call, Number);
+    paginationArray.shift();
 
+// Set pages
+var projectPage = 2,
+    skillsPage = 5,
+    connectPage = AppLength;
+
+// Carousel
 var Slide = React.createClass({
   	getInitialState: function() {
       return {
@@ -29,14 +38,8 @@ var Slide = React.createClass({
       this.setState({previousPage: this.state.page});
     	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
-    projectPage: function() {
-      this.setState({page: 2});
-    },
-    skillsPage: function() {
-      this.setState({page: 5});
-    },
-    connectPage: function() {
-      this.setState({page: AppLength});
+    skipToPage: function(n) {
+      this.setState({page: n});
     },
     render: function() {
       var key = 0,
@@ -48,17 +51,21 @@ var Slide = React.createClass({
            this.state.page === AppLength ? filler : <a key="next-page" id="next-page" className="nav-arrow nav-right noselect" href="#" onClick={this.nextPage}>»</a>,
           diamond =
             <span className="diamond noselect">◆</span>
+          pagination =
+            <div>
+              {paginationArray}
+            </div>
           navigation =
             <nav>
               {leftArrow} <span id="page-number" className="noselect">{this.state.page + 1}</span> {rightArrow}
             </nav>,
           fastNav =
             <nav className="fast-nav">
-              <a key="project-page" id="project-page" className="diamond noselect" href="#" onClick={this.projectPage}>Projects</a>
+              <a key="project-page" id="project-page" className="noselect" href="#" onClick={this.skipToPage.bind(this, projectPage)}>Projects</a>
               {diamond}
-              <a key="skills-page" id="skills-page" className="diamond noselect" href="#" onClick={this.skillsPage}>Skills</a>
+              <a key="skills-page" id="skills-page" className="noselect" href="#" onClick={this.skipToPage.bind(this, skillsPage)}>Skills</a>
               {diamond}
-              <a key="connect-page" id="connect-page" className="diamond noselect" href="#" onClick={this.connectPage}>Connect</a>
+              <a key="connect-page" id="connect-page" className="noselect" href="#" onClick={this.skipToPage.bind(this, connectPage)}>Connect</a>
             </nav>;
 
       return (

@@ -3,12 +3,21 @@
  * @jsx React.DOM
  */
 
+// Dependencies
 var React = require('react/addons'),
     ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
 		ReactTransitionGroup = React.addons.TransitionGroup,
     slides = require('./slides.jsx'),
-		AppLength = slides.length - 1;
+		AppLength = slides.length - 1
+    paginationArray = Array.apply(null, {length: AppLength + 1}).map(Number.call, Number);
+    paginationArray.shift();
 
+// Set pages
+var projectPage = 2,
+    skillsPage = 5,
+    connectPage = AppLength;
+
+// Carousel
 var Slide = React.createClass({displayName: "Slide",
   	getInitialState: function() {
       return {
@@ -30,14 +39,8 @@ var Slide = React.createClass({displayName: "Slide",
       this.setState({previousPage: this.state.page});
     	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
-    projectPage: function() {
-      this.setState({page: 2});
-    },
-    skillsPage: function() {
-      this.setState({page: 5});
-    },
-    connectPage: function() {
-      this.setState({page: AppLength});
+    skipToPage: function(n) {
+      this.setState({page: n});
     },
     render: function() {
       var key = 0,
@@ -49,17 +52,21 @@ var Slide = React.createClass({displayName: "Slide",
            this.state.page === AppLength ? filler : React.createElement("a", {key: "next-page", id: "next-page", className: "nav-arrow nav-right noselect", href: "#", onClick: this.nextPage}, "»"),
           diamond =
             React.createElement("span", {className: "diamond noselect"}, "◆")
+          pagination =
+            React.createElement("div", null, 
+              paginationArray
+            )
           navigation =
             React.createElement("nav", null, 
               leftArrow, " ", React.createElement("span", {id: "page-number", className: "noselect"}, this.state.page + 1), " ", rightArrow
             ),
           fastNav =
             React.createElement("nav", {className: "fast-nav"}, 
-              React.createElement("a", {key: "project-page", id: "project-page", className: "diamond noselect", href: "#", onClick: this.projectPage}, "Projects"), 
+              React.createElement("a", {key: "project-page", id: "project-page", className: "noselect", href: "#", onClick: this.skipToPage.bind(this, projectPage)}, "Projects"), 
               diamond, 
-              React.createElement("a", {key: "skills-page", id: "skills-page", className: "diamond noselect", href: "#", onClick: this.skillsPage}, "Skills"), 
+              React.createElement("a", {key: "skills-page", id: "skills-page", className: "noselect", href: "#", onClick: this.skipToPage.bind(this, skillsPage)}, "Skills"), 
               diamond, 
-              React.createElement("a", {key: "connect-page", id: "connect-page", className: "diamond noselect", href: "#", onClick: this.connectPage}, "Connect")
+              React.createElement("a", {key: "connect-page", id: "connect-page", className: "noselect", href: "#", onClick: this.skipToPage.bind(this, connectPage)}, "Connect")
             );
 
       return (
