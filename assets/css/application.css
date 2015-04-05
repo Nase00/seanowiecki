@@ -36,7 +36,7 @@ a:active {
 #slide {
   box-sizing: border-box;
   position: absolute;
-  margin: 3em auto auto;
+  margin: 3em auto 2.75em auto;
   left: 0;
   right: 0;
   width: 320px;
