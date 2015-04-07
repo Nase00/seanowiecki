@@ -16,6 +16,10 @@
     "url": "https://github.com/Nase00/nase00.github.io/issues"
   },
   "homepage": "https://github.com/Nase00/nase00.github.io",
+  "dependencies": {
+    "react": "^0.13.1",
+    "react-shift": "^0.2.2"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.6.0",
@@ -25,6 +29,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-react": "^0.12.1",
     "matchdep": "^0.3.0",
-    "react": "^0.13.1"
+    "react": "^0.13.1",
+    "react-shift": "^0.2.2"
   }
 }
