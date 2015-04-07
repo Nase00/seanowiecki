@@ -90,7 +90,7 @@ var React = require('react/addons'),
         <a className="connect link" href="mailto:seanowiecki@gmail.com" target="_blank">Email</a>
         <a className="connect link" href="https://www.linkedin.com/pub/sean-owiecki/a3/732/66b" target="_blank">LinkedIn</a>
         <a className="connect link" href="https://github.com/Nase00" target="_blank">Github</a>
-        <a className="connect link" href="https://www.npmjs.com/~nase" target="_blank">NPM</a>
+        <a className="connect link" href="https://www.npmjs.com/~nase" target="_blank">npm</a>
       </div>
     ];
 

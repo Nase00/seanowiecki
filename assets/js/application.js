@@ -185,7 +185,7 @@ var React = require('react/addons'),
         React.createElement("a", {className: "connect link", href: "mailto:seanowiecki@gmail.com", target: "_blank"}, "Email"), 
         React.createElement("a", {className: "connect link", href: "https://www.linkedin.com/pub/sean-owiecki/a3/732/66b", target: "_blank"}, "LinkedIn"), 
         React.createElement("a", {className: "connect link", href: "https://github.com/Nase00", target: "_blank"}, "Github"), 
-        React.createElement("a", {className: "connect link", href: "https://www.npmjs.com/~nase", target: "_blank"}, "NPM")
+        React.createElement("a", {className: "connect link", href: "https://www.npmjs.com/~nase", target: "_blank"}, "npm")
       )
     ];
 
