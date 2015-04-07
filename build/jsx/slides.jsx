@@ -13,10 +13,13 @@ var React = require('react/addons'),
           I am restless when it comes to programming, constantly striving to solve problems while also giving a great deal of attention to the cleanliness and convention of my code.
           It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community.
         </p>
+        <p>
+          <strong>I contribute to open source.</strong> I'm currently developing a <a href="https://www.npmjs.com/package/react-shift" target="_blank">"Carousel" component in React</a>. It is based on the code I created to build this website.
+        </p>
         <p>When I'm not coding, I'm ripping off the "warranty void if tampered with" stickers on my electronics. I enjoy customizing and getting the most performance out of software and hardware.</p>
       </div>,
       <div key={slideKey++}>
-        <h3>My current project.</h3>
+        <h3>My latest application.</h3>
         <a href="http://divvy-odyssey.heroku.com" target="_blank">
           <img id="odyssey-preview" className="preview" />
         </a>
@@ -25,7 +28,7 @@ var React = require('react/addons'),
           <a className="project link" href="https://github.com/Nase00/Odyssey" target="_blank">(source)</a> <a className="project link" href="http://divvy-odyssey.heroku.com" target="_blank">(live)</a>
         </div>
         <div className="project-desc">
-          My submission for the <a href="https://www.divvybikes.com/datachallenge" target="_blank">2015 Divvy Data Challenge</a>. Over 2 million trips are loaded into a graph database and served up by a Rails API. 
+          My submission for the <a href="https://www.divvybikes.com/datachallenge" target="_blank">2015 Divvy Data Challenge</a>, currently a finalist for "Most Creative." Over 2 million trips are loaded into a graph database and served up by a Rails API. 
           A single-page frontend powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year.
         </div>
       </div>,
@@ -85,8 +88,9 @@ var React = require('react/addons'),
         <h3>Let's connect.</h3>
         <img id="me" src="assets/images/me.png" />
         <a className="connect link" href="mailto:seanowiecki@gmail.com" target="_blank">Email</a>
-        <a className="connect link" href="https://github.com/Nase00" target="_blank">Github</a>
         <a className="connect link" href="https://www.linkedin.com/pub/sean-owiecki/a3/732/66b" target="_blank">LinkedIn</a>
+        <a className="connect link" href="https://github.com/Nase00" target="_blank">Github</a>
+        <a className="connect link" href="https://www.npmjs.com/~nase" target="_blank">NPM</a>
       </div>
     ];
 

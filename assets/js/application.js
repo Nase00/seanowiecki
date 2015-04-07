@@ -6,9 +6,9 @@
 // Dependencies
 var React = require('react/addons'),
     ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
-		ReactTransitionGroup = React.addons.TransitionGroup,
+    ReactTransitionGroup = React.addons.TransitionGroup,
     slides = require('./slides.jsx'),
-		AppLength = slides.length - 1
+    AppLength = slides.length - 1
     paginationArray = Array.apply(null, {length: AppLength + 1}).map(Number.call, Number);
 
 // Set pages
@@ -18,7 +18,7 @@ var projectPage = 2,
 
 // Carousel
 var Slide = React.createClass({displayName: "Slide",
-  	getInitialState: function() {
+    getInitialState: function() {
       return {
         mounted: false,
         page: 0,
@@ -32,11 +32,11 @@ var Slide = React.createClass({displayName: "Slide",
     },
     nextPage: function() {
       this.setState({previousPage: this.state.page});
-    	this.state.page === AppLength ? null : this.setState({page: this.state.page + 1});
+      this.state.page === AppLength ? null : this.setState({page: this.state.page + 1});
     },
     previousPage: function() {
       this.setState({previousPage: this.state.page});
-    	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
+      this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
     skipToPage: function(n) {
       this.setState({page: n});
@@ -108,10 +108,13 @@ var React = require('react/addons'),
           "I am restless when it comes to programming, constantly striving to solve problems while also giving a great deal of attention to the cleanliness and convention of my code." + ' ' +
           "It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community."
         ), 
+        React.createElement("p", null, 
+          React.createElement("strong", null, "I contribute to open source."), " I'm currently developing a ", React.createElement("a", {href: "https://www.npmjs.com/package/react-shift", target: "_blank"}, "\"Carousel\" component in React"), ". It is based on the code I created to build this website."
+        ), 
         React.createElement("p", null, "When I'm not coding, I'm ripping off the \"warranty void if tampered with\" stickers on my electronics. I enjoy customizing and getting the most performance out of software and hardware.")
       ),
       React.createElement("div", {key: slideKey++}, 
-        React.createElement("h3", null, "My current project."), 
+        React.createElement("h3", null, "My latest application."), 
         React.createElement("a", {href: "http://divvy-odyssey.heroku.com", target: "_blank"}, 
           React.createElement("img", {id: "odyssey-preview", className: "preview"})
         ), 
@@ -120,7 +123,7 @@ var React = require('react/addons'),
           React.createElement("a", {className: "project link", href: "https://github.com/Nase00/Odyssey", target: "_blank"}, "(source)"), " ", React.createElement("a", {className: "project link", href: "http://divvy-odyssey.heroku.com", target: "_blank"}, "(live)")
         ), 
         React.createElement("div", {className: "project-desc"}, 
-          "My submission for the ", React.createElement("a", {href: "https://www.divvybikes.com/datachallenge", target: "_blank"}, "2015 Divvy Data Challenge"), ". Over 2 million trips are loaded into a graph database and served up by a Rails API." + ' ' + 
+          "My submission for the ", React.createElement("a", {href: "https://www.divvybikes.com/datachallenge", target: "_blank"}, "2015 Divvy Data Challenge"), ", currently a finalist for \"Most Creative.\" Over 2 million trips are loaded into a graph database and served up by a Rails API." + ' ' + 
           "A single-page frontend powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year."
         )
       ),
@@ -180,8 +183,9 @@ var React = require('react/addons'),
         React.createElement("h3", null, "Let's connect."), 
         React.createElement("img", {id: "me", src: "assets/images/me.png"}), 
         React.createElement("a", {className: "connect link", href: "mailto:seanowiecki@gmail.com", target: "_blank"}, "Email"), 
+        React.createElement("a", {className: "connect link", href: "https://www.linkedin.com/pub/sean-owiecki/a3/732/66b", target: "_blank"}, "LinkedIn"), 
         React.createElement("a", {className: "connect link", href: "https://github.com/Nase00", target: "_blank"}, "Github"), 
-        React.createElement("a", {className: "connect link", href: "https://www.linkedin.com/pub/sean-owiecki/a3/732/66b", target: "_blank"}, "LinkedIn")
+        React.createElement("a", {className: "connect link", href: "https://www.npmjs.com/~nase", target: "_blank"}, "NPM")
       )
     ];
 

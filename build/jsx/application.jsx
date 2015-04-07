@@ -5,9 +5,9 @@
 // Dependencies
 var React = require('react/addons'),
     ReactCSSTransitionGroup = React.addons.CSSTransitionGroup,
-		ReactTransitionGroup = React.addons.TransitionGroup,
+    ReactTransitionGroup = React.addons.TransitionGroup,
     slides = require('./slides.jsx'),
-		AppLength = slides.length - 1
+    AppLength = slides.length - 1
     paginationArray = Array.apply(null, {length: AppLength + 1}).map(Number.call, Number);
 
 // Set pages
@@ -17,7 +17,7 @@ var projectPage = 2,
 
 // Carousel
 var Slide = React.createClass({
-  	getInitialState: function() {
+    getInitialState: function() {
       return {
         mounted: false,
         page: 0,
@@ -31,11 +31,11 @@ var Slide = React.createClass({
     },
     nextPage: function() {
       this.setState({previousPage: this.state.page});
-    	this.state.page === AppLength ? null : this.setState({page: this.state.page + 1});
+      this.state.page === AppLength ? null : this.setState({page: this.state.page + 1});
     },
     previousPage: function() {
       this.setState({previousPage: this.state.page});
-    	this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
+      this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
     },
     skipToPage: function(n) {
       this.setState({page: n});

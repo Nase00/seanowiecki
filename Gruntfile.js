@@ -1,6 +1,4 @@
 module.exports = function(grunt) {
-  var cleanCssOptions;
-
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
  
   grunt.initConfig({
@@ -60,7 +58,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-less");
   grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-browserify")
+  grunt.loadNpmTasks("grunt-browserify");
   grunt.loadNpmTasks("grunt-react");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
