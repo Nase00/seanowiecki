@@ -25,8 +25,7 @@ module.exports = function(grunt) {
       combined_file_output: {
         files: {
           "assets/js/application.js": [
-            "build/jsx/application.jsx",
-            "build/jsx/slides.jsx"
+            "build/jsx/application.jsx"
           ]
         }
       },
