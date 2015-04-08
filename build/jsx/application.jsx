@@ -9,7 +9,8 @@ var shiftOptions = {
     "Projects": 2,
     "Skills": 5,
     "Connect": 7
-  }
+  },
+  transitions: true
 }
 
 React.render(

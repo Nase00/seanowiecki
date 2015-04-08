@@ -1,103 +1,106 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 @import url(http://fonts.googleapis.com/css?family=Norican);
-nav {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-nav .nav-arrow {
-  outline: none;
-  line-height: .45em;
-  font-family: 'Droid Sans Mono', Helvetica;
-  font-size: 4em;
-  transition: all 0.25s;
+div#react-shift-wrapper {
+  color: #ffffff;
+  font: 18px 'Droid Sans Mono', Helvetica;
 }
-nav .nav-arrow:hover {
-  text-decoration: none;
-  color: #ffdd7f;
+div#react-shift-wrapper div#react-shift-page {
+  position: absolute;
+  margin: 60px auto 40px auto;
+  right: 0;
+  left: 0;
+  width: 320px;
 }
-nav .nav-arrow:active {
-  font-size: 3.5em;
-}
-nav #page-numbers {
-  width: 100%;
-  font-family: 'Norican', Arial;
-  color: #ffaa00;
-}
-nav #page-numbers a {
-  position: relative;
-  vertical-align: top;
-  margin: .15em;
-  height: 4em;
-  font-size: 1.75em;
-  transition: all .25s;
-}
-nav #page-numbers a:hover {
-  margin: .05em;
-  font-size: 2.25em;
-}
-nav #page-numbers a.current-page {
-  position: relative;
-  margin: .15em;
-  top: -0.25em;
-  font-size: 3em;
-}
-nav span {
-  margin: .25em;
-}
-nav.fast-nav {
-  font-family: 'Abel', sans-serif;
-  font-size: 1.5em;
-}
-nav.fast-nav a,
-nav.fast-nav .diamond {
-  margin: .25em;
-}
-header,
-footer {
-  z-index: 200;
+div#react-shift-wrapper nav#react-shift-navigation {
   position: fixed;
-  margin: 0;
   padding: 0;
-  left: 0;
   right: 0;
-  background: #191919;
-}
-header {
-  padding: .5em;
-  top: 0;
-  height: 1.9em;
-  border-bottom: 1px solid #ffbf00;
-}
-footer {
-  margin: 2.75em 0 0 0;
-  padding: .25em 0 .25em 0;
-  height: 2.75em;
+  left: 0;
   bottom: 0;
-  left: 0;
+  height: 40px;
+  vertical-align: top;
+  text-align: center;
+  font: 22px 'Abel', sans-serif;
+  background: #191919;
+  border-top: 1px solid #ffaa00;
+}
+div#react-shift-wrapper span#react-shift-page-numbers a {
+  font: 22px 'Norican', Arial;
+  transition: all 0.5s;
+}
+div#react-shift-wrapper span#react-shift-page-numbers a:hover {
+  font: 24px 'Norican', Arial;
+}
+div#react-shift-wrapper span#react-shift-page-numbers a#react-shift-current-page {
+  font: 28px 'Norican', Arial;
+  text-decoration: underline;
+}
+div#react-shift-wrapper a#react-shift-next-page,
+div#react-shift-wrapper a#react-shift-previous-page {
+  position: fixed;
+  bottom: -10px;
+  font: 22px 'Droid Sans Mono', Helvetica;
+}
+div#react-shift-wrapper a#react-shift-next-page:active,
+div#react-shift-wrapper a#react-shift-previous-page:active {
+  font: 56px 'Droid Sans Mono', Helvetica;
+}
+div#react-shift-wrapper a#react-shift-next-page {
+  right: 100px;
+}
+div#react-shift-wrapper a#react-shift-previous-page {
+  left: 100px;
+}
+div#react-shift-wrapper a#react-shift-next-page,
+div#react-shift-wrapper a#react-shift-previous-page {
+  display: inline-block;
+  font: 60px 'Droid Sans Mono', Helvetica;
+}
+div#react-shift-wrapper div.react-shift-nav-arrow {
+  z-index: 100;
+  display: inline-block;
+  width: 20px;
+  font: 18px 'Droid Sans Mono', Helvetica;
+}
+div#react-shift-wrapper div#react-shift-fast-links {
+  padding: 8px;
+  position: fixed;
+  top: 0;
   right: 0;
-  border-top: 1px solid #ffbf00;
+  left: 0;
+  text-align: center;
+  font: 30px 'Abel', sans-serif;
+  background: #191919;
+  border-bottom: 1px solid #ffaa00;
 }
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+div#react-shift-wrapper a.react-shift-fast-link {
+  margin: 0 10px 0 10px;
 }
-@media only screen and (min-width: 1200px) and (min-height: 825px) {
-  nav .nav-arrow {
+div#react-shift-page {
+  margin: 0;
+}
+@media only screen and (min-width: 1000px) and (min-height: 825px) {
+  div#react-shift-wrapper div#react-shift-page {
+    width: 620px;
+  }
+  div#react-shift-wrapper a#react-shift-next-page,
+  div#react-shift-wrapper a#react-shift-previous-page {
     position: fixed;
-    font-size: 10em;
-    top: 200px;
+    top: 100px;
+    font: 180px 'Droid Sans Mono', Helvetica;
   }
-  nav .nav-arrow:active {
-    font-size: 9.5em;
+  div#react-shift-wrapper a#react-shift-next-page {
+    right: 80px;
   }
-  nav .nav-right {
-    left: 75%;
+  div#react-shift-wrapper a#react-shift-previous-page {
+    left: 80px;
   }
-  nav .nav-left {
-    right: 75%;
+  div#react-shift-wrapper a#react-shift-next-page:active,
+  div#react-shift-wrapper a#react-shift-previous-page:active {
+    font: 170px 'Droid Sans Mono', Helvetica;
   }
 }

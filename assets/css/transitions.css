@@ -1,28 +1,20 @@
-.slide-left-enter, .slide-right-enter {  
+.react-shift-page-enter {  
   position: absolute;
   right: 0; left: 0;
   opacity: 0.01;
   transition: opacity .25s ease-in;
 }
-.slide-left-enter.slide-left-enter-active, .slide-right-enter.slide-right-enter-active {  
+.react-shift-page-enter.react-shift-page-enter-active {  
   opacity: 1;
 }
-.slide-left-leave {  
+.react-shift-page-leave {  
   position: absolute;
   right: 0; left: 0;
   opacity: 1;
   transition: opacity .25s ease-in;
 }
-.slide-left-leave.slide-left-leave-active {
+.react-shift-page-leave.react-shift-page-leave-active {
   position: absolute;
-  opacity: 0.01;
-  transition: opacity .25s ease-in;
-}
-
-.slide-right-leave {  
-  opacity: 1;
-}
-.slide-right-leave.slide-right-leave-active {  
   opacity: 0.01;
   transition: opacity .25s ease-in;
 }

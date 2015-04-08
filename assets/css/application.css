@@ -1,6 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 @import url(http://fonts.googleapis.com/css?family=Norican);
+* {
+  box-sizing: border-box;
+}
 html {
   background: #3f3f3f;
   background-repeat: no-repeat;
@@ -79,7 +82,7 @@ a.link:nth-child(2) {
   right: 0;
 }
 a.link:hover {
-  width: 30%;
+  width: 110px;
   color: #ffd666;
   text-decoration: none;
   background-color: #191919;
@@ -90,15 +93,13 @@ a.link:hover a {
 }
 a.project {
   display: inline-block;
-  width: 21%;
+  width: 136px;
 }
 a.connect {
   display: block;
   margin: 1em auto;
-  width: 35%;
+  width: 18em;
 }
-@media only screen and (min-width: 992px) {
-  #slide {
-    width: 620px;
-  }
+a.connect:hover {
+  width: 12em;
 }

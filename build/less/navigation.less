@@ -1,103 +1,99 @@
 @import "styles";
 
-nav {
-	text-align: center;
-	.nav-arrow {
-		outline: none;
-		line-height: .45em;
-		font-family: @primary-font;
-		font-size: 4em;
-		transition: all 0.25s;
+div#react-shift-wrapper {
+	color: @primary-text;
+	font: 18px @primary-font;
+	div#react-shift-page {
+		position: absolute;
+		margin: 60px auto 40px auto;
+		right: 0; left: 0;
+		width: 320px;
 	}
-	.nav-arrow:hover {
-		text-decoration: none;
-		color: #ffdd7f;
+	nav#react-shift-navigation {
+		position: fixed;
+		padding: 0;
+		right: 0; left: 0; bottom: 0;
+		height: 40px;
+		vertical-align: top;
+		text-align: center;
+		font: 22px @secondary-font;
+		background: @secondary-background;
+		border-top: 1px solid @primary-border;
 	}
-	.nav-arrow:active {
-		font-size: 3.5em;
+	span#react-shift-page-numbers a {
+		font: 22px @tertiary-font;
+		transition: all 0.5s;
 	}
-
-	#page-numbers {
-		width: 100%;
-		font-family: @tertiary-font;
-		color: @primary-link;
-		a {
-			position: relative;
-			vertical-align: top;
-			margin: .15em;
-			height: 4em;
-			font-size: 1.75em;
-			transition: all .25s;
+	span#react-shift-page-numbers a:hover {
+		font: 24px @tertiary-font;
+	}
+	span#react-shift-page-numbers a#react-shift-current-page {
+		font: 28px @tertiary-font;
+		text-decoration: underline;
+	}
+	a#react-shift-next-page, a#react-shift-previous-page {
+		position: fixed;
+		bottom: -10px;
+		font: 22px @primary-font;
+	}
+	a#react-shift-next-page:active, a#react-shift-previous-page:active {
+		font: 56px @primary-font;
+	}
+	a#react-shift-next-page {
+		right: 100px;
 		}
-		a:hover {
-			margin: .05em;
-			font-size: 2.25em;
-		}
-		a.current-page {
-			position: relative;
-			margin: .15em;
-			top: -.25em;
-			font-size: 3em;
-		}
+	a#react-shift-previous-page {
+		left: 100px;
 	}
-	span {
-		margin: .25em;
+	a#react-shift-next-page, a#react-shift-previous-page {
+		display: inline-block;
+		font: 60px @primary-font;
+	}
+	div.react-shift-nav-arrow {
+		z-index: 100;
+		display: inline-block;
+		width: 20px;
+		font: 18px @primary-font;
+	}
+	div#react-shift-fast-links {
+		padding: 8px;
+		position: fixed;
+		top: 0; right: 0; left: 0;
+		text-align: center;
+		font: 30px @secondary-font;
+		background: @secondary-background;
+		border-bottom: 1px solid @primary-border;
+	}
+	a.react-shift-fast-link {
+		margin: 0 10px 0 10px;
 	}
 }
-nav.fast-nav {
-	font-family: @secondary-font;
-	font-size: 1.5em;
-	a, .diamond {
-		margin: .25em;
-	}
-}
-
-header, footer {
-	z-index: 200;
-	position: fixed;
+div#react-shift-page {
 	margin: 0;
-	padding: 0;
-	left: 0; right: 0;
-	background: #191919;
 }
-header {
-	padding: .5em;
-	top: 0;
-	height: @header-height;
-	border-bottom: 1px solid #ffbf00;
-}
-footer {
-	margin: @footer-height 0 0 0;
-	padding: .25em 0 .25em 0;
-	height: @footer-height;
-	bottom: 0; left: 0; right: 0;
-	border-top: 1px solid #ffbf00;
-}
+// a.react-shift-fast-link:nth-child(2)::before, a.react-shift-fast-link:nth-child(2)::after {
+// 	content: "◆";
+// 	pointer-events: none;
+// }
 
-.noselect {
-	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-@media only screen and (min-width: 1200px) and (min-height: 825px) {
-	nav {
-		.nav-arrow {
+@media only screen and (min-width: 1000px) and (min-height: 825px) {
+	div#react-shift-wrapper {
+		div#react-shift-page {
+			width: 620px;
+		}
+		a#react-shift-next-page, a#react-shift-previous-page {
 			position: fixed;
-			font-size: 10em;
-			top: 200px;
+			top: 100px;
+			font: 180px @primary-font;
 		}
-		.nav-arrow:active {
-			font-size: 9.5em;
+		a#react-shift-next-page {
+			right: 80px;
+			}
+		a#react-shift-previous-page {
+			left: 80px;
 		}
-		.nav-right {
-			left: 75%;
-		}
-		.nav-left {
-			right: 75%;
+		a#react-shift-next-page:active, a#react-shift-previous-page:active {
+			font: 170px @primary-font;
 		}
 	}
 }
