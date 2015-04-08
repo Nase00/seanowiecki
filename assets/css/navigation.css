@@ -50,10 +50,10 @@ div#react-shift-wrapper a#react-shift-previous-page:active {
   font: 56px 'Droid Sans Mono', Helvetica;
 }
 div#react-shift-wrapper a#react-shift-next-page {
-  right: 100px;
+  right: 70px;
 }
 div#react-shift-wrapper a#react-shift-previous-page {
-  left: 100px;
+  left: 70px;
 }
 div#react-shift-wrapper a#react-shift-next-page,
 div#react-shift-wrapper a#react-shift-previous-page {
