@@ -16,15 +16,18 @@ div#react-shift-wrapper div#react-shift-page {
   width: 320px;
 }
 div#react-shift-wrapper nav#react-shift-navigation {
-  position: fixed;
   padding: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
   height: 40px;
   vertical-align: top;
   text-align: center;
   font: 22px 'Abel', sans-serif;
+}
+div#react-shift-wrapper span#react-shift-page-numbers {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background: #191919;
   border-top: 1px solid #ffaa00;
 }
@@ -39,8 +42,14 @@ div#react-shift-wrapper span#react-shift-page-numbers a#react-shift-current-page
   font: 28px 'Norican', Arial;
   text-decoration: underline;
 }
+div#react-shift-wrapper div.react-shift-nav-arrow {
+  display: inline-block;
+  width: 20px;
+  font: 18px 'Droid Sans Mono', Helvetica;
+}
 div#react-shift-wrapper a#react-shift-next-page,
 div#react-shift-wrapper a#react-shift-previous-page {
+  z-index: 200;
   position: fixed;
   bottom: -10px;
   font: 22px 'Droid Sans Mono', Helvetica;
@@ -60,18 +69,11 @@ div#react-shift-wrapper a#react-shift-previous-page {
   display: inline-block;
   font: 60px 'Droid Sans Mono', Helvetica;
 }
-div#react-shift-wrapper div.react-shift-nav-arrow {
-  z-index: 100;
-  display: inline-block;
-  width: 20px;
-  font: 18px 'Droid Sans Mono', Helvetica;
-}
 div#react-shift-wrapper div#react-shift-fast-links {
-  padding: 8px;
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
   text-align: center;
   font: 30px 'Abel', sans-serif;
   background: #191919;

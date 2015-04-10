@@ -10,13 +10,16 @@ div#react-shift-wrapper {
 		width: 320px;
 	}
 	nav#react-shift-navigation {
-		position: fixed;
 		padding: 0;
-		right: 0; left: 0; bottom: 0;
 		height: 40px;
 		vertical-align: top;
 		text-align: center;
 		font: 22px @secondary-font;
+	}
+	span#react-shift-page-numbers {
+		position: fixed;
+		width: 100%;
+		right: 0; left: 0; bottom: 0;
 		background: @secondary-background;
 		border-top: 1px solid @primary-border;
 	}
@@ -31,7 +34,13 @@ div#react-shift-wrapper {
 		font: 28px @tertiary-font;
 		text-decoration: underline;
 	}
+	div.react-shift-nav-arrow {
+		display: inline-block;
+		width: 20px;
+		font: 18px @primary-font;
+	}
 	a#react-shift-next-page, a#react-shift-previous-page {
+		z-index: 200;
 		position: fixed;
 		bottom: -10px;
 		font: 22px @primary-font;
@@ -49,16 +58,11 @@ div#react-shift-wrapper {
 		display: inline-block;
 		font: 60px @primary-font;
 	}
-	div.react-shift-nav-arrow {
-		z-index: 100;
-		display: inline-block;
-		width: 20px;
-		font: 18px @primary-font;
-	}
 	div#react-shift-fast-links {
-		padding: 8px;
 		position: fixed;
-		top: 0; right: 0; left: 0;
+		margin: 0;
+		padding: 8px;
+		width: 100%;
 		text-align: center;
 		font: 30px @secondary-font;
 		background: @secondary-background;
