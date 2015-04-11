@@ -17,6 +17,7 @@ div#react-shift-wrapper div#react-shift-page {
 }
 div#react-shift-wrapper nav#react-shift-navigation {
   position: fixed;
+  -webkit-backface-visibility: hidden;
   height: 40px;
   right: 0;
   left: 0;
