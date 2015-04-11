@@ -30,7 +30,7 @@ React.render(
       <p>
         <strong>I contribute to open source.</strong> I'm currently developing a <a href="https://www.npmjs.com/package/react-shift" target="_blank">"Carousel" component in React</a>. It is based on the code I created to build this website.
       </p>
-      <p>When I'm not coding, I'm ripping off the "warranty void if tampered with" stickers on my electronics. I enjoy customizing and getting the most performance out of software and hardware.</p>
+      <p>When I'm not coding, I'm ripping off the "warranty void if tampered with" stickers on my electronics and <a href="http://imgur.com/a/fOchn" target="_blank">building computers</a>. I enjoy customizing and getting the most performance out of software and hardware.</p>
     </div>
     <div key={pageKey++}>
       <h3>My latest application.</h3>
@@ -43,7 +43,7 @@ React.render(
       </div>
       <div className="project-desc">
         My submission for the <a href="https://www.divvybikes.com/datachallenge" target="_blank">2015 Divvy Data Challenge</a>, currently a finalist for "Most Creative." Over 2 million trips are loaded into a graph database and served up by a Rails API. 
-        A single-page frontend powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year.
+        A single-page front-end powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year.
       </div>
     </div>
     <div key={pageKey++}>

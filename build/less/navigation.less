@@ -10,94 +10,86 @@ div#react-shift-wrapper {
 		width: 320px;
 	}
 	nav#react-shift-navigation {
-		padding: 0;
+		position: fixed;
 		height: 40px;
+		right: 0; left: 0; bottom: 0;
 		vertical-align: top;
 		text-align: center;
-		font: 22px @secondary-font;
-	}
-	span#react-shift-page-numbers {
-		position: fixed;
 		width: 100%;
-		right: 0; left: 0; bottom: 0;
 		background: @secondary-background;
 		border-top: 1px solid @primary-border;
-	}
-	span#react-shift-page-numbers a {
-		font: 22px @tertiary-font;
-		transition: all 0.5s;
-	}
-	span#react-shift-page-numbers a:hover {
-		font: 24px @tertiary-font;
-	}
-	span#react-shift-page-numbers a#react-shift-current-page {
-		font: 28px @tertiary-font;
-		text-decoration: underline;
-	}
-	div.react-shift-nav-arrow {
-		display: inline-block;
-		width: 20px;
-		font: 18px @primary-font;
-	}
-	a#react-shift-next-page, a#react-shift-previous-page {
-		z-index: 200;
-		position: fixed;
-		bottom: -10px;
-		font: 22px @primary-font;
-	}
-	a#react-shift-next-page:active, a#react-shift-previous-page:active {
-		font: 56px @primary-font;
-	}
-	a#react-shift-next-page {
-		right: 70px;
+		div#react-shift-fast-links {
+			position: fixed;
+			margin: 0;
+			padding: 8px;
+			top: 0;
+			width: 100%;
+			text-align: center;
+			font: 30px @secondary-font;
+			background: @secondary-background;
+			border-bottom: 1px solid @primary-border;
 		}
-	a#react-shift-previous-page {
-		left: 70px;
-	}
-	a#react-shift-next-page, a#react-shift-previous-page {
-		display: inline-block;
-		font: 60px @primary-font;
-	}
-	div#react-shift-fast-links {
-		position: fixed;
-		margin: 0;
-		padding: 8px;
-		width: 100%;
-		text-align: center;
-		font: 30px @secondary-font;
-		background: @secondary-background;
-		border-bottom: 1px solid @primary-border;
-	}
-	a.react-shift-fast-link {
-		margin: 0 10px 0 10px;
+		a.react-shift-fast-link {
+			margin: 0 10px 0 10px;
+		}
+		span#react-shift-page-numbers {
+			position: fixed;
+			left: 0; right: 0;
+			a {
+				margin: 4px;
+				font: 24px @tertiary-font;
+				transition: all .25s;
+			}
+			a#react-shift-current-page {
+				font: 28px @tertiary-font;
+				text-decoration: underline;
+			}
+		}
+		div.react-shift-nav-arrow {
+			display: inline-block;
+			width: 20px;
+		}
+		a#react-shift-next-page, a#react-shift-previous-page {
+			z-index: 200;
+			position: fixed;
+			bottom: -10px;
+			font: 56px @primary-font;
+		}
+		a#react-shift-next-page {
+			right: 50px;
+		}
+		a#react-shift-previous-page {
+			left: 50px;
+		}
+		a#react-shift-next-page:active, a#react-shift-previous-page:active {
+			font: 52px @primary-font;
+		}
 	}
 }
 div#react-shift-page {
 	margin: 0;
 }
-// a.react-shift-fast-link:nth-child(2)::before, a.react-shift-fast-link:nth-child(2)::after {
-// 	content: "◆";
-// 	pointer-events: none;
-// }
 
 @media only screen and (min-width: 1000px) and (min-height: 825px) {
 	div#react-shift-wrapper {
 		div#react-shift-page {
 			width: 620px;
 		}
-		a#react-shift-next-page, a#react-shift-previous-page {
-			position: fixed;
-			top: 100px;
-			font: 180px @primary-font;
-		}
-		a#react-shift-next-page {
-			right: 80px;
+		nav#react-shift-navigation {
+			a#react-shift-next-page, a#react-shift-previous-page {
+				position: fixed;
+				top: 100px;
+				font: 170px @primary-font;
 			}
-		a#react-shift-previous-page {
-			left: 80px;
-		}
-		a#react-shift-next-page:active, a#react-shift-previous-page:active {
-			font: 170px @primary-font;
+			a#react-shift-next-page {
+				right: 90px;
+			}
+			a#react-shift-previous-page {
+				left: 90px;
+			}
+			a#react-shift-next-page:active, a#react-shift-previous-page:active {
+				font: 160px @primary-font;
+			}
 		}
 	}
 }

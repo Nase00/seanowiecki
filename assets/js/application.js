@@ -31,7 +31,7 @@ React.render(
       React.createElement("p", null, 
         React.createElement("strong", null, "I contribute to open source."), " I'm currently developing a ", React.createElement("a", {href: "https://www.npmjs.com/package/react-shift", target: "_blank"}, "\"Carousel\" component in React"), ". It is based on the code I created to build this website."
       ), 
-      React.createElement("p", null, "When I'm not coding, I'm ripping off the \"warranty void if tampered with\" stickers on my electronics. I enjoy customizing and getting the most performance out of software and hardware.")
+      React.createElement("p", null, "When I'm not coding, I'm ripping off the \"warranty void if tampered with\" stickers on my electronics and ", React.createElement("a", {href: "http://imgur.com/a/fOchn", target: "_blank"}, "building computers"), ". I enjoy customizing and getting the most performance out of software and hardware.")
     ), 
     React.createElement("div", {key: pageKey++}, 
       React.createElement("h3", null, "My latest application."), 
@@ -44,7 +44,7 @@ React.render(
       ), 
       React.createElement("div", {className: "project-desc"}, 
         "My submission for the ", React.createElement("a", {href: "https://www.divvybikes.com/datachallenge", target: "_blank"}, "2015 Divvy Data Challenge"), ", currently a finalist for \"Most Creative.\" Over 2 million trips are loaded into a graph database and served up by a Rails API." + ' ' + 
-        "A single-page frontend powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year."
+        "A single-page front-end powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year."
       )
     ), 
     React.createElement("div", {key: pageKey++}, 

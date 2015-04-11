@@ -16,71 +16,65 @@ div#react-shift-wrapper div#react-shift-page {
   width: 320px;
 }
 div#react-shift-wrapper nav#react-shift-navigation {
-  padding: 0;
-  height: 40px;
-  vertical-align: top;
-  text-align: center;
-  font: 22px 'Abel', sans-serif;
-}
-div#react-shift-wrapper span#react-shift-page-numbers {
   position: fixed;
-  width: 100%;
+  height: 40px;
   right: 0;
   left: 0;
   bottom: 0;
+  vertical-align: top;
+  text-align: center;
+  width: 100%;
   background: #191919;
   border-top: 1px solid #ffaa00;
 }
-div#react-shift-wrapper span#react-shift-page-numbers a {
-  font: 22px 'Norican', Arial;
-  transition: all 0.5s;
-}
-div#react-shift-wrapper span#react-shift-page-numbers a:hover {
-  font: 24px 'Norican', Arial;
-}
-div#react-shift-wrapper span#react-shift-page-numbers a#react-shift-current-page {
-  font: 28px 'Norican', Arial;
-  text-decoration: underline;
-}
-div#react-shift-wrapper div.react-shift-nav-arrow {
-  display: inline-block;
-  width: 20px;
-  font: 18px 'Droid Sans Mono', Helvetica;
-}
-div#react-shift-wrapper a#react-shift-next-page,
-div#react-shift-wrapper a#react-shift-previous-page {
-  z-index: 200;
-  position: fixed;
-  bottom: -10px;
-  font: 22px 'Droid Sans Mono', Helvetica;
-}
-div#react-shift-wrapper a#react-shift-next-page:active,
-div#react-shift-wrapper a#react-shift-previous-page:active {
-  font: 56px 'Droid Sans Mono', Helvetica;
-}
-div#react-shift-wrapper a#react-shift-next-page {
-  right: 70px;
-}
-div#react-shift-wrapper a#react-shift-previous-page {
-  left: 70px;
-}
-div#react-shift-wrapper a#react-shift-next-page,
-div#react-shift-wrapper a#react-shift-previous-page {
-  display: inline-block;
-  font: 60px 'Droid Sans Mono', Helvetica;
-}
-div#react-shift-wrapper div#react-shift-fast-links {
+div#react-shift-wrapper nav#react-shift-navigation div#react-shift-fast-links {
   position: fixed;
   margin: 0;
   padding: 8px;
+  top: 0;
   width: 100%;
   text-align: center;
   font: 30px 'Abel', sans-serif;
   background: #191919;
   border-bottom: 1px solid #ffaa00;
 }
-div#react-shift-wrapper a.react-shift-fast-link {
+div#react-shift-wrapper nav#react-shift-navigation a.react-shift-fast-link {
   margin: 0 10px 0 10px;
+}
+div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers a {
+  margin: 4px;
+  font: 24px 'Norican', Arial;
+  transition: all .25s;
+}
+div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers a#react-shift-current-page {
+  font: 28px 'Norican', Arial;
+  text-decoration: underline;
+}
+div#react-shift-wrapper nav#react-shift-navigation div.react-shift-nav-arrow {
+  display: inline-block;
+  width: 20px;
+}
+div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page,
+div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
+  z-index: 200;
+  position: fixed;
+  bottom: -10px;
+  font: 56px 'Droid Sans Mono', Helvetica;
+}
+div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page {
+  right: 50px;
+}
+div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
+  left: 50px;
+}
+div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page:active,
+div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page:active {
+  font: 52px 'Droid Sans Mono', Helvetica;
 }
 div#react-shift-page {
   margin: 0;
@@ -89,20 +83,20 @@ div#react-shift-page {
   div#react-shift-wrapper div#react-shift-page {
     width: 620px;
   }
-  div#react-shift-wrapper a#react-shift-next-page,
-  div#react-shift-wrapper a#react-shift-previous-page {
+  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page,
+  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
     position: fixed;
     top: 100px;
-    font: 180px 'Droid Sans Mono', Helvetica;
-  }
-  div#react-shift-wrapper a#react-shift-next-page {
-    right: 80px;
-  }
-  div#react-shift-wrapper a#react-shift-previous-page {
-    left: 80px;
-  }
-  div#react-shift-wrapper a#react-shift-next-page:active,
-  div#react-shift-wrapper a#react-shift-previous-page:active {
     font: 170px 'Droid Sans Mono', Helvetica;
+  }
+  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page {
+    right: 90px;
+  }
+  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
+    left: 90px;
+  }
+  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page:active,
+  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page:active {
+    font: 160px 'Droid Sans Mono', Helvetica;
   }
 }
