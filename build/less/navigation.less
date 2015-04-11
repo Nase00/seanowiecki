@@ -10,15 +10,10 @@ div#react-shift-wrapper {
 		width: 320px;
 	}
 	nav#react-shift-navigation {
-		position: fixed;
-		-webkit-backface-visibility: hidden;
 		height: 40px;
-		right: 0; left: 0; bottom: 0;
 		vertical-align: top;
 		text-align: center;
 		width: 100%;
-		background: @secondary-background;
-		border-top: 1px solid @primary-border;
 		div#react-shift-fast-links {
 			position: fixed;
 			margin: 0;
@@ -35,7 +30,9 @@ div#react-shift-wrapper {
 		}
 		span#react-shift-page-numbers {
 			position: fixed;
-			left: 0; right: 0;
+			left: 0; right: 0; bottom: 0;
+			background: @secondary-background;
+			border-top: 1px solid @primary-border;
 			a {
 				margin: 4px;
 				font: 24px @tertiary-font;
@@ -78,7 +75,6 @@ div#react-shift-page {
 		}
 		nav#react-shift-navigation {
 			a#react-shift-next-page, a#react-shift-previous-page {
-				position: fixed;
 				top: 100px;
 				font: 170px @primary-font;
 			}

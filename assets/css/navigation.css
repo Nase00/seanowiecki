@@ -16,17 +16,10 @@ div#react-shift-wrapper div#react-shift-page {
   width: 320px;
 }
 div#react-shift-wrapper nav#react-shift-navigation {
-  position: fixed;
-  -webkit-backface-visibility: hidden;
   height: 40px;
-  right: 0;
-  left: 0;
-  bottom: 0;
   vertical-align: top;
   text-align: center;
   width: 100%;
-  background: #191919;
-  border-top: 1px solid #ffaa00;
 }
 div#react-shift-wrapper nav#react-shift-navigation div#react-shift-fast-links {
   position: fixed;
@@ -46,6 +39,9 @@ div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers
   position: fixed;
   left: 0;
   right: 0;
+  bottom: 0;
+  background: #191919;
+  border-top: 1px solid #ffaa00;
 }
 div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers a {
   margin: 4px;
@@ -86,7 +82,6 @@ div#react-shift-page {
   }
   div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page,
   div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
-    position: fixed;
     top: 100px;
     font: 170px 'Droid Sans Mono', Helvetica;
   }
