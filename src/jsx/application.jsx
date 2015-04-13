@@ -27,7 +27,7 @@ React.render(
         It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community.
       </p>
       <p>
-        <strong>I contribute to open source.</strong> I'm currently developing a <a href="https://www.npmjs.com/package/react-shift" target="_blank">"Carousel" component in React</a>. It is based on the code I created to build this website.
+        <strong><a href="https://github.com/Devbootcamp/mentor-pairing/pull/124/commits" target="_blank">I contribute to open source.</a></strong> I've <a href="https://www.npmjs.com/package/react-shift" target="_blank">published code to npm</a>.
       </p>
       <p>When I'm not coding, I'm ripping off the "warranty void if tampered with" stickers on my electronics and <a href="http://imgur.com/a/fOchn" target="_blank">building computers</a>. I enjoy customizing and getting the most performance out of software and hardware.</p>
     </div>
