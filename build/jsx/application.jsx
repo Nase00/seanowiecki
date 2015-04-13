@@ -2,19 +2,18 @@ var React = require('react/addons'),
     Shift = require('react-shift')
     pageKey = 0;
 
-var shiftOptions = {
-  nextPage: "»",
-  previousPage: "«",
-  fastLinks: {
-    "Projects": 2,
-    "Skills": 5,
-    "Connect": 7
-  },
-  transitions: true
-}
+var nextAndPrev = {
+      nextPage: "»",
+      previousPage: "«"
+    },
+    fastLinks = {
+      "Projects": 2,
+      "Skills": 5,
+      "Connect": 7
+    }
 
 React.render(
-  <Shift options={shiftOptions}>
+  <Shift nextAndPrev={nextAndPrev} fastLinks={fastLinks} transitions={true}>
     <div key={pageKey++}>
       <h1>Sean Owiecki</h1>
       <h1>Software Engineer</h1>

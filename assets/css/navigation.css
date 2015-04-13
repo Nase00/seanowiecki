@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 div#react-shift-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   color: #ffffff;
   font: 18px 'Droid Sans Mono', Helvetica;
 }
@@ -35,7 +38,7 @@ div#react-shift-wrapper nav#react-shift-navigation div#react-shift-fast-links {
 div#react-shift-wrapper nav#react-shift-navigation a.react-shift-fast-link {
   margin: 0 10px 0 10px;
 }
-div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers {
+div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination {
   position: fixed;
   left: 0;
   right: 0;
@@ -43,12 +46,12 @@ div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers
   background: #191919;
   border-top: 1px solid #ffaa00;
 }
-div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers a {
+div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination a {
   margin: 4px;
   font: 24px 'Norican', Arial;
   transition: all .25s;
 }
-div#react-shift-wrapper nav#react-shift-navigation span#react-shift-page-numbers a#react-shift-current-page {
+div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination a.react-shift-current-page {
   font: 28px 'Norican', Arial;
   text-decoration: underline;
 }

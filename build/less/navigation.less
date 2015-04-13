@@ -1,6 +1,9 @@
 @import "styles";
 
 div#react-shift-wrapper {
+	position: absolute;
+	height: 100%;
+	width: 100%;
 	color: @primary-text;
 	font: 18px @primary-font;
 	div#react-shift-page {
@@ -28,7 +31,7 @@ div#react-shift-wrapper {
 		a.react-shift-fast-link {
 			margin: 0 10px 0 10px;
 		}
-		span#react-shift-page-numbers {
+		span#react-shift-pagination {
 			position: fixed;
 			left: 0; right: 0; bottom: 0;
 			background: @secondary-background;
@@ -38,7 +41,7 @@ div#react-shift-wrapper {
 				font: 24px @tertiary-font;
 				transition: all .25s;
 			}
-			a#react-shift-current-page {
+			a.react-shift-current-page {
 				font: 28px @tertiary-font;
 				text-decoration: underline;
 			}
