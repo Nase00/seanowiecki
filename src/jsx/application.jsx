@@ -41,7 +41,7 @@ React.render(
         <a className="project link" href="https://github.com/Nase00/Odyssey" target="_blank">(source)</a> <a className="project link" href="http://divvy-odyssey.heroku.com" target="_blank">(live)</a>
       </div>
       <div className="project-desc">
-        My submission for the <a href="https://www.divvybikes.com/datachallenge" target="_blank">2015 Divvy Data Challenge</a>, currently a finalist for "Most Creative." Over 2 million trips are loaded into a graph database and served up by a Rails API. 
+        My submission for the <a href="https://www.divvybikes.com/datachallenge" target="_blank">2015 Divvy Data Challenge</a>, made finalist for "Most Creative." Over 2 million trips are loaded into a graph database and served up by a Rails API. 
         A single-page front-end powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year.
       </div>
     </div>
