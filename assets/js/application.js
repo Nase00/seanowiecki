@@ -59,79 +59,117 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],2:[function(require,module,exports){
-var React = require('react/addons');
+var React = require('react/addons')
+    , ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
 
-// Dependencies
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+React.initializeTouchEvents(true)
 
-// Carousel
+var Arrow = React.createClass({displayName: "Arrow",
+    render: function() {
+      return (
+        React.createElement("div", {className: "react-shift-nav-arrow"}, 
+          React.createElement("a", {href: "#", onClick: this.props.on_click}, 
+            this.props.label
+          )
+        )
+      )
+    }
+  })
+
 var Shift = React.createClass({displayName: "Shift",
     propTypes: {
-      nextAndPrev: React.PropTypes.object,
-      nextAndPrev: React.PropTypes.shape({
-        nextPage: React.PropTypes.string,
-        previousPage: React.PropTypes.string
-      }),
-      fastLinks: React.PropTypes.object,
-      transitions: React.PropTypes.bool,
-      scrollable: React.PropTypes.bool
-    },
-    getDefaultProps: function() {
+      arrowLabels: React.PropTypes.object
+      , arrowLabels: React.PropTypes.shape({
+        next: React.PropTypes.string
+        , previous: React.PropTypes.string
+      })
+      , fastLinks: React.PropTypes.object
+      , transitions: React.PropTypes.bool
+      , scrollable: React.PropTypes.bool
+    }
+    , getDefaultProps: function() {
       return {
-        nextAndPrev: {
-          nextPage: "Next page",
-          previousPage: "Previous page"
-        },
-        fastLinks: {},
-        scrollable: true
-      };
-    },
-    getInitialState: function() {
+        arrowLabels: {
+          next: "Next page"
+          , previous: "Previous page"
+        }
+        , fastLinks: {}
+        , scrollable: true
+      }
+    }
+    , getInitialState: function() {
       return {
-        mounted: false,
-        page: 0,
-        pageCount: 0
-      };
-    },
-    componentDidMount: function() {
+        mounted: false
+        , page: 0
+        , pageCount: 0
+      }
+    }
+    , componentDidMount: function() {
       this.setState({
-        mounted: true,
-        pageCount: this.props.children.length - 1,
-        scrollable: this.props.scrollable
-      });
-    },
-    nextPage: function() {
-      this.state.page === this.state.pageCount ? null : this.setState({page: this.state.page + 1});
-    },
-    previousPage: function() {
-      this.state.page === 0 ? null : this.setState({page: this.state.page - 1});
-    },
-    skipToPage: function(n) {
-      this.setState({page: n});
-    },
-    handleWheel: function(e) {
+        mounted: true
+        , pageCount: this.props.children.length - 1
+        , scrollable: this.props.scrollable
+      })
+    }
+    , next: function() {
+      if (this.state.page === this.state.pageCount) {
+        null
+      } else {
+        this.setState({page: this.state.page + 1})
+      }
+    }
+    , previous: function() {
+      if (this.state.page === 0) {
+        null
+      } else {
+        this.setState({page: this.state.page - 1})
+      }
+    }
+    , setPage: function(n) {
+      this.setState({page: n})
+    }
+    , handleWheel: function(e) {
       if (this.props.scrollable) {
         if (e.deltaY > 0) {
-          this.nextPage();
+          this.next()
         } else {
-          this.previousPage();
-        };
-      };
-    },
-    render: function() {
-      var self = this,
-          fastLinks = this.props.fastLinks,
-          paginationArray = Array.apply(null, {length: this.state.pageCount + 1}).map(Number.call, Number),
-          filler =
-            React.createElement("div", {className: "react-shift-nav-arrow"}, "\u00a0"),
-          leftArrow =
-            this.state.page === 0 ? filler : React.createElement("div", {key: "react-shift-previous-page", className: "react-shift-nav-arrow"}, React.createElement("a", {id: "react-shift-previous-page", href: "#", onClick: this.previousPage}, this.props.nextAndPrev.previousPage)),
-          rightArrow =
-           this.state.page === this.state.pageCount ? filler : React.createElement("div", {key: "react-shift-next-page", className: "react-shift-nav-arrow"}, React.createElement("a", {id: "react-shift-next-page", href: "#", onClick: this.nextPage}, this.props.nextAndPrev.nextPage)),
-          pagination =
-            React.createElement("span", {key: "react-shift-page-numbers", id: "react-shift-pagination", className: "react-shift-pagination"}, 
+          this.previous()
+        }
+      }
+    }
+    , handleTouch: function(e) {
+      console.log(e.changedTouches[0].pageX)
+    }
+    , render: function() {
+      var self = this
+          , fastLinks = this.props.fastLinks
+          , paginationArray = Array
+              .apply(null, {length: this.state.pageCount + 1})
+              .map(Number.call, Number)
+          , filler =
+            React.createElement("div", {
+              className: "react-shift-nav-arrow"}, 
+              "\u00a0"
+            )
+          , leftArrow =
+            this.state.page === 0 ? filler :
+              React.createElement(Arrow, {
+                id: "react-shift-previous-page", 
+                label: this.props.arrowLabels.previous, 
+                on_click: this.previous})
+          , rightArrow =
+           this.state.page === this.state.pageCount ? filler :
+            React.createElement(Arrow, {
+              id: "react-shift-next-page", 
+              label: this.props.arrowLabels.next, 
+              on_click: this.next})
+          , pagination =
+            React.createElement("span", {
+              key: "react-shift-page-numbers", 
+              id: "react-shift-pagination", 
+              className: "react-shift-pagination"}, 
               paginationArray.map(function(n) {
-                return n == self.state.page ? React.createElement("a", {key: "currentPage-" + self.state.page, id: "page-" + n, className: "react-shift-page-number react-shift-current-page", href: "#"}, n + 1) : React.createElement("a", {key: "page" + n, id: "page-" + n, className: "react-shift-page-number", href: "#", onClick: self.skipToPage.bind(null, n)}, n + 1)
+                return n == self.state.page ? React.createElement("a", {key: "currentPage-" + self.state.page, id: "page-" + n, className: "react-shift-page-number react-shift-current-page", href: "#"}, n + 1) : React.createElement("a", {key: "page" + n, id: "page-" + n, className: "react-shift-page-number", href: "#", onClick: self.setPage.bind(null, n)}, n + 1)
               })
             )
 
@@ -139,30 +177,41 @@ var Shift = React.createClass({displayName: "Shift",
             var fastLinksList =
               React.createElement("div", {id: "react-shift-fast-links"}, 
                 Object.keys(fastLinks).map(function(i, v) {
-                  return React.createElement("a", {key: "fastLink" + i, className: "react-shift-fast-link", href: "#", onClick: self.skipToPage.bind(null, fastLinks[i])}, Object.keys(fastLinks)[v]);
+                  return React.createElement("a", {
+                    key: "fastLink" + i, 
+                    className: "react-shift-fast-link", 
+                    href: "#", 
+                    onClick: self.setPage.bind(null, fastLinks[i])}, 
+                      Object.keys(fastLinks)[v]
+                  )
                 })
               )
           } else {
-            var fastLinksList;
-          };
-
+            var fastLinksList
+          }
       return (
-        React.createElement("div", {key: "react-shift", id: "react-shift-wrapper", onWheelCapture: this.handleWheel}, 
+        React.createElement("div", {
+          key: "react-shift", 
+          id: "react-shift-wrapper", 
+          onWheelCapture: this.handleWheel, 
+          onTouchMove: this.handleTouch}, 
           React.createElement("div", {id: "react-shift-page"}, 
-            this.props.transitions ? React.createElement(ReactCSSTransitionGroup, {transitionName: "react-shift-page"}, 
-              this.props.children[this.state.page]
-            ) : this.props.children[this.state.page]
+            this.props.transitions ?
+              React.createElement(ReactCSSTransitionGroup, {transitionName: "react-shift-page"}, 
+                this.props.children[this.state.page]
+              )
+            : this.props.children[this.state.page]
           ), 
           React.createElement("nav", {id: "react-shift-navigation"}, 
             fastLinksList, 
             leftArrow, pagination, rightArrow
           )
         )
-      );
+      )
     }
-  });
+  })
 
-module.exports = Shift;
+module.exports = Shift
 },{"react/addons":3}],3:[function(require,module,exports){
 module.exports = require('./lib/ReactWithAddons');
 
@@ -21866,54 +21915,57 @@ module.exports = warning;
 
 }).call(this,require('_process'))
 },{"./emptyFunction":132,"_process":1}],175:[function(require,module,exports){
-var React = require('react/addons'),
-    Shift = require('react-shift')
-    pageKey = 0;
+var React = require('react/addons')
+    , Shift = require('react-shift')
+    , pageKey = 0
 
 var nextAndPrev = {
-      nextPage: "»",
-      previousPage: "«"
-    },
-    fastLinks = {
-      "Projects": 2,
-      "Skills": 5,
-      "Connect": 7
+      nextPage: "»"
+      , previousPage: "«"
+    }
+    , fastLinks = {
+      "Projects": 2
+      , "Skills": 5
+      , "Connect": 7
     }
 
 React.render(
   React.createElement(Shift, {nextAndPrev: nextAndPrev, fastLinks: fastLinks, transitions: true}, 
-    React.createElement("div", {key: pageKey++}, 
+    React.createElement("div", null/* Introduction */ , 
       React.createElement("h1", null, "Sean Owiecki"), 
       React.createElement("h1", null, "Software Engineer"), 
       React.createElement("h4", null, "( back-end, front-end, UX, & UI )")
     ), 
-    React.createElement("div", null, 
+    React.createElement("div", null/* Cover */ , 
       React.createElement("h3", null, "A little about me."), 
       React.createElement("p", null, 
         "I'm passionate about creating and problem-solving, whether it be on back-end systems or front-end user experiences." + ' ' +
         "I am restless when it comes to programming, constantly striving to solve problems while also giving a great deal of attention to the cleanliness and convention of my code." + ' ' +
         "It's my goal to create things that are not just beneficial to my immediate needs, but useful, maintainable, and expandable by future coders in the community."
       ), 
-      React.createElement("p", null, 
-        React.createElement("strong", null, React.createElement("a", {href: "https://github.com/Devbootcamp/mentor-pairing/pull/124/commits", target: "_blank"}, "I contribute to open source.")), " I've ", React.createElement("a", {href: "https://www.npmjs.com/package/react-shift", target: "_blank"}, "published code to npm"), "."
-      ), 
       React.createElement("p", null, "When I'm not coding, I'm ripping off the \"warranty void if tampered with\" stickers on my electronics and ", React.createElement("a", {href: "http://imgur.com/a/fOchn", target: "_blank"}, "building computers"), ". I enjoy customizing and getting the most performance out of software and hardware.")
     ), 
-    React.createElement("div", {key: pageKey++}, 
+    React.createElement("div", null/* Projects */ , 
       React.createElement("h3", null, "My latest application."), 
-      React.createElement("a", {href: "http://divvy-odyssey.heroku.com", target: "_blank"}, 
+      React.createElement("a", {href: "http://www.seanowiecki.com/Odyssey-client/", target: "_blank"}, 
         React.createElement("img", {id: "odyssey-preview", className: "preview"})
       ), 
       React.createElement("h4", {className: "project-title"}, "Odyssey"), 
       React.createElement("div", {className: "links"}, 
-        React.createElement("a", {className: "project link", href: "https://github.com/Nase00/Odyssey", target: "_blank"}, "(source)"), " ", React.createElement("a", {className: "project link", href: "http://divvy-odyssey.heroku.com", target: "_blank"}, "(live)")
+        React.createElement("a", {className: "project link", href: "https://github.com/Nase00/Odyssey", target: "_blank"}, "(source)"), " ", React.createElement("a", {className: "project link", href: "http://www.seanowiecki.com/Odyssey-client/", target: "_blank"}, "(live)")
       ), 
       React.createElement("div", {className: "project-desc"}, 
-        "My submission for the ", React.createElement("a", {href: "https://www.divvybikes.com/datachallenge", target: "_blank"}, "2015 Divvy Data Challenge"), ", made finalist for \"Most Creative.\" Over 2 million trips are loaded into a graph database and served up by a Rails API." + ' ' + 
-        "A single-page front-end powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year."
+        "My submission for the ", React.createElement("a", {href: "https://www.divvybikes.com/datachallenge", target: "_blank"}, "2015 Divvy Data Challenge"), ", which made finalist for \"Most Creative.\"", 
+        React.createElement("p", null, 
+          "Over 2 million trips are loaded into a graph database and served up by a Rails API." + ' ' + 
+          "A single-page front-end powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year."
+        ), 
+        React.createElement("p", null, 
+          "Currently running on a demo database. (Hosting a Neo4j database containing over 3 million nodes wasn't cheap!)"
+        )
       )
     ), 
-    React.createElement("div", {key: pageKey++}, 
+    React.createElement("div", null, 
       React.createElement("h3", null, "Some of my past work."), 
         React.createElement("a", {href: "http://beyondyourhorizon.heroku.com", target: "_blank"}, 
           React.createElement("img", {id: "horizon-preview", className: "preview"})
@@ -21923,22 +21975,47 @@ React.render(
           React.createElement("a", {className: "project link", href: "https://github.com/Nase00/Horizon", target: "_blank"}, "(source)"), " ", React.createElement("a", {className: "project link", href: "http://beyondyourhorizon.heroku.com", target: "_blank"}, "(live)")
         ), 
         React.createElement("div", {className: "project-desc"}, 
-          "Interactive visualization of one's exposure to topics within their bubble of Twitter followees. Powered by Ruby on Rails and Neo4j. Built" + ' ' +
-        "in 8 days during Phase 3 of Dev Bootcamp."
+          "Interactive visualization of one's exposure to topics within their bubble of Twitter followees. Powered by Ruby on Rails and Neo4j.", 
+          React.createElement("p", null, 
+            "Built in 8 days during Phase 3 of Dev Bootcamp."
+          )
         )
     ), 
-    React.createElement("div", {key: pageKey++}, 
-      React.createElement("h3", null, "Some more of my past work."), 
-      React.createElement("a", {href: "http://atomic6.heroku.com", target: "_blank"}, 
-        React.createElement("img", {id: "atomic6-preview", className: "preview"})
+    React.createElement("div", null, 
+      React.createElement("h3", null, "Some of my smaller projects."), 
+      React.createElement("ul", null, 
+        React.createElement("li", null, 
+          React.createElement("a", {href: "http://atomic6.heroku.com", target: "_blank"}, "Atomic6"), 
+          React.createElement("p", null, 
+            "A blog built using Sinatra, ActiveRecord, AJAX, and Underscore. Multi-user sessions with Bcrypt authorizations.",  
+            React.createElement("a", {href: "https://github.com/Nase00/atomic6", target: "_blank"}, "(source)")
+          )
+        ), 
+        React.createElement("li", null, 
+          React.createElement("a", {href: "https://github.com/bluegills-2014/metaoverflow", target: "_blank"}, "Metaoverflow"), 
+          React.createElement("p", null, 
+            "A Stackoverflow clone, built in a team of four. Please note that, due to pairing, my name is not listed as a contributor"
+          )
+        )
       ), 
-      React.createElement("h4", {className: "project-title"}, "Atomic6"), 
-      React.createElement("div", {className: "links"}, 
-        React.createElement("a", {className: "project link", href: "https://github.com/Nase00/atomic6", target: "_blank"}, "(source)"), " ", React.createElement("a", {className: "project link", href: "http://atomic6.heroku.com", target: "_blank"}, "(live)")
-      ), 
-      React.createElement("div", {className: "project-desc"}, "Blog built using Sinatra, ActiveRecord, AJAX, and Underscore. Multi-user sessions with Bcrypt authorizations.")
+      React.createElement("h3", null, "I also contribute to open source."), 
+      React.createElement("ul", null, 
+        React.createElement("li", null, 
+          React.createElement("a", {href: "https://www.npmjs.com/package/react-shift", target: "_blank"}, 
+            "react-shift"
+          ), 
+          React.createElement("p", null, 
+            "A module for creating a carousel component with React as the single dependency."
+          )
+        ), 
+        React.createElement("li", null, 
+          React.createElement("a", {href: "https://github.com/Devbootcamp/mentor-pairing/pull/124/commits", target: "_blank"}, 
+            "Paring is caring"
+          ), " (contributor)"
+        )
+      )
     ), 
-    React.createElement("div", {key: pageKey++}, 
+    React.createElement("div", null, 
       React.createElement("h3", null, "Just a few of my skills."), 
       React.createElement("ul", null, 
         React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Languages:"), " Ruby, JavaScript, HTML5, CSS3"), 
@@ -21948,7 +22025,7 @@ React.render(
         React.createElement("li", {className: "bulletize"}, React.createElement("b", null, "Other:"), " Git, Rake, Grunt")
       )
     ), 
-    React.createElement("div", {key: pageKey++}, 
+    React.createElement("div", null, 
       React.createElement("h3", null, "Past experience."), 
       React.createElement("ul", null, 
         React.createElement("li", {className: "bulletize"}, 
@@ -21965,7 +22042,7 @@ React.render(
         )
       )
     ), 
-    React.createElement("div", {key: pageKey++}, 
+    React.createElement("div", null, 
       React.createElement("h3", null, "Let's connect."), 
       React.createElement("img", {id: "me", src: "assets/images/me.png"}), 
       React.createElement("a", {className: "connect link", href: "mailto:seanowiecki@gmail.com", target: "_blank"}, "Email"), 
