@@ -3,8 +3,8 @@ var React = require('react/addons')
     , pageKey = 0
 
 var nextAndPrev = {
-      nextPage: "»"
-      , previousPage: "«"
+      next: "»"
+      , previous: "«"
     }
     , fastLinks = {
       "Projects": 2
@@ -13,7 +13,7 @@ var nextAndPrev = {
     }
 
 React.render(
-  <Shift nextAndPrev={nextAndPrev} fastLinks={fastLinks} transitions={true}>
+  <Shift arrowLabels={nextAndPrev} fastLinks={fastLinks} transitions={true}>
     <div /* Introduction */ >
       <h1>Sean Owiecki</h1>
       <h1>Software Engineer</h1>

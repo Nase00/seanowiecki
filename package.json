@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Nase00/nase00.github.io",
   "dependencies": {
     "react": "^0.13.1",
-    "react-shift": "^1.0.1"
+    "react-shift": "^1.0.3"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
