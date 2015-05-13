@@ -43,17 +43,21 @@ div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination {
   left: 0;
   right: 0;
   bottom: 0;
+  padding: 6px 0 0 0;
+  height: 46px;
   background: #191919;
   border-top: 1px solid #ffaa00;
 }
 div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination a {
   margin: 4px;
-  font: 24px 'Norican', Arial;
-  transition: all .25s;
+  font: 22px 'Norican', Arial;
 }
 div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination a.react-shift-current-page {
-  font: 28px 'Norican', Arial;
-  text-decoration: underline;
+  padding: 4px;
+  font: 22px 'Norican', Arial;
+  color: #191919;
+  background-color: #ffaa00;
+  border: 1px solid #191919;
 }
 div#react-shift-wrapper nav#react-shift-navigation div.react-shift-nav-arrow {
   display: inline-block;
@@ -63,7 +67,7 @@ div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page,
 div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
   z-index: 200;
   position: fixed;
-  bottom: -10px;
+  bottom: -6px;
   font: 56px 'Droid Sans Mono', Helvetica;
 }
 div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page {
@@ -83,19 +87,19 @@ div#react-shift-page {
   div#react-shift-wrapper div#react-shift-page {
     width: 620px;
   }
-  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page,
-  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
+  div#react-shift-wrapper span#react-shift-pagination a#react-shift-next-page,
+  div#react-shift-wrapper span#react-shift-pagination a#react-shift-previous-page {
     top: 100px;
     font: 170px 'Droid Sans Mono', Helvetica;
   }
-  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page {
+  div#react-shift-wrapper span#react-shift-pagination a#react-shift-next-page {
     right: 90px;
   }
-  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
+  div#react-shift-wrapper span#react-shift-pagination a#react-shift-previous-page {
     left: 90px;
   }
-  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page:active,
-  div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page:active {
+  div#react-shift-wrapper span#react-shift-pagination a#react-shift-next-page:active,
+  div#react-shift-wrapper span#react-shift-pagination a#react-shift-previous-page:active {
     font: 160px 'Droid Sans Mono', Helvetica;
   }
 }

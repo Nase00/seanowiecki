@@ -34,16 +34,21 @@ div#react-shift-wrapper {
 		span#react-shift-pagination {
 			position: fixed;
 			left: 0; right: 0; bottom: 0;
+			padding: 6px 0 0 0;
+			height: 46px;
 			background: @secondary-background;
 			border-top: 1px solid @primary-border;
+
 			a {
 				margin: 4px;
-				font: 24px @tertiary-font;
-				transition: all .25s;
+				font: 22px @tertiary-font;
 			}
 			a.react-shift-current-page {
-				font: 28px @tertiary-font;
-				text-decoration: underline;
+				padding: 4px;
+				font: 22px @tertiary-font;
+				color: #191919;
+				background-color: @primary-link;
+				border: 1px solid #191919;
 			}
 		}
 		div.react-shift-nav-arrow {
@@ -53,7 +58,7 @@ div#react-shift-wrapper {
 		a#react-shift-next-page, a#react-shift-previous-page {
 			z-index: 200;
 			position: fixed;
-			bottom: -10px;
+			bottom: -6px;
 			font: 56px @primary-font;
 		}
 		a#react-shift-next-page {
@@ -76,7 +81,7 @@ div#react-shift-page {
 		div#react-shift-page {
 			width: 620px;
 		}
-		nav#react-shift-navigation {
+		span#react-shift-pagination {
 			a#react-shift-next-page, a#react-shift-previous-page {
 				top: 100px;
 				font: 170px @primary-font;
