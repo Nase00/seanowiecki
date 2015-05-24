@@ -127,7 +127,6 @@ React.render(
     </div>
     <div>
       <h3>Let's connect.</h3>
-      <img id="me" src="assets/images/me.png" />
       <a className="connect link" href="mailto:seanowiecki@gmail.com" target="_blank">Email</a>
       <a className="connect link" href="https://www.linkedin.com/pub/sean-owiecki/a3/732/66b" target="_blank">LinkedIn</a>
       <a className="connect link" href="https://github.com/Nase00" target="_blank">Github</a>

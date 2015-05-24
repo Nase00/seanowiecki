@@ -22184,7 +22184,6 @@ React.render(
     ), 
     React.createElement("div", null, 
       React.createElement("h3", null, "Let's connect."), 
-      React.createElement("img", {id: "me", src: "assets/images/me.png"}), 
       React.createElement("a", {className: "connect link", href: "mailto:seanowiecki@gmail.com", target: "_blank"}, "Email"), 
       React.createElement("a", {className: "connect link", href: "https://www.linkedin.com/pub/sean-owiecki/a3/732/66b", target: "_blank"}, "LinkedIn"), 
       React.createElement("a", {className: "connect link", href: "https://github.com/Nase00", target: "_blank"}, "Github"), 
@@ -22193,4 +22192,5 @@ React.render(
   ),
   document.getElementById("anchor")
 );
+
 },{"react-shift":3,"react/addons":4}]},{},[176]);
