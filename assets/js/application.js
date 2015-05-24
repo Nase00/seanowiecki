@@ -22101,7 +22101,7 @@ React.render(
           "A single-page front-end powered by React and the Google Maps API visualizes the entire odyssey each individual bike took throughout Chicago over the course of an entire year."
         ), 
         React.createElement("p", null, 
-          "Currently running on a demo database. (Hosting a Neo4j database containing over 3 million nodes wasn't cheap!)"
+          "Originally created with Rails, then refactored using Sinatra, then refactored using Node and Hapi."
         )
       )
     ), 
