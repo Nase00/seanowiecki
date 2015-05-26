@@ -31,9 +31,12 @@ div#react-shift-wrapper nav#react-shift-navigation div#react-shift-fast-links {
   top: 0;
   width: 100%;
   text-align: center;
-  font: 30px 'Abel', sans-serif;
   background: #191919;
   border-bottom: 1px solid #ffaa00;
+}
+div#react-shift-wrapper nav#react-shift-navigation div#react-shift-fast-links a.react-shift-fast-link {
+  font: 30px 'Abel', sans-serif;
+  transition: all .75s;
 }
 div#react-shift-wrapper nav#react-shift-navigation a.react-shift-fast-link {
   margin: 0 10px 0 10px;
