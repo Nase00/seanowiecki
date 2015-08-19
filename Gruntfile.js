@@ -1,3 +1,5 @@
+var babelify = require("babelify");
+
 module.exports = function(grunt) {
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
  
@@ -14,7 +16,7 @@ module.exports = function(grunt) {
     },
     browserify: {
       options: {
-        transform: [ require("grunt-react").browserify ]
+        transform: [ babelify ]
       },
       app: {
         src: "src/jsx/application.jsx",
@@ -51,7 +53,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ["./src/**/*"],
-      tasks: ["browserify", "less", "uglify"],
+      tasks: ["browserify", "less"],
     },
   });
 
