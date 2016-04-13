@@ -4,44 +4,31 @@
 * {
   box-sizing: border-box;
 }
-div#react-shift-wrapper {
+div.react-shift-wrapper {
   position: absolute;
   height: 90%;
   width: 100%;
   color: #ffffff;
   font: 18px 'Droid Sans Mono', Helvetica;
 }
-div#react-shift-wrapper div#react-shift-page {
+div.react-shift-wrapper div.react-shift-page {
   position: absolute;
   margin: 60px auto 40px auto;
   right: 0;
   left: 0;
   width: 320px;
 }
-div#react-shift-wrapper nav#react-shift-navigation {
+div.react-shift-wrapper nav.react-shift-navigation {
+  display: none;
   height: 40px;
   vertical-align: top;
   text-align: center;
   width: 100%;
 }
-div#react-shift-wrapper nav#react-shift-navigation div#react-shift-fast-links {
-  position: fixed;
-  margin: 0;
-  padding: 8px;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  background: #191919;
-  border-bottom: 1px solid #ffaa00;
-}
-div#react-shift-wrapper nav#react-shift-navigation div#react-shift-fast-links a.react-shift-fast-link {
-  font: 30px 'Abel', sans-serif;
-  transition: all .75s;
-}
-div#react-shift-wrapper nav#react-shift-navigation a.react-shift-fast-link {
+div.react-shift-wrapper nav.react-shift-navigation a.react-shift-fast-link {
   margin: 0 10px 0 10px;
 }
-div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination {
+div.react-shift-wrapper nav.react-shift-navigation span.react-shift-pagination {
   position: fixed;
   left: 0;
   right: 0;
@@ -51,58 +38,58 @@ div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination {
   background: #191919;
   border-top: 1px solid #ffaa00;
 }
-div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination a {
+div.react-shift-wrapper nav.react-shift-navigation span.react-shift-pagination a {
   margin: 4px;
   font: 22px 'Norican', Arial;
 }
-div#react-shift-wrapper nav#react-shift-navigation span#react-shift-pagination a.react-shift-current-page {
+div.react-shift-wrapper nav.react-shift-navigation span.react-shift-pagination a.react-shift-current-page {
   padding: 4px;
   font: 22px 'Norican', Arial;
   color: #191919;
   background-color: #ffaa00;
   border: 1px solid #191919;
 }
-div#react-shift-wrapper nav#react-shift-navigation div.react-shift-nav-arrow {
+div.react-shift-wrapper nav.react-shift-navigation div.react-shift-nav-arrow {
   display: inline-block;
   width: 20px;
 }
-div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page,
-div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
+div.react-shift-wrapper nav.react-shift-navigation a.react-shift-next-page,
+div.react-shift-wrapper nav.react-shift-navigation a.react-shift-previous-page {
   z-index: 200;
   position: fixed;
   bottom: -6px;
   font: 56px 'Droid Sans Mono', Helvetica;
 }
-div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page {
+div.react-shift-wrapper nav.react-shift-navigation a.react-shift-next-page {
   right: 50px;
 }
-div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page {
+div.react-shift-wrapper nav.react-shift-navigation a.react-shift-previous-page {
   left: 50px;
 }
-div#react-shift-wrapper nav#react-shift-navigation a#react-shift-next-page:active,
-div#react-shift-wrapper nav#react-shift-navigation a#react-shift-previous-page:active {
+div.react-shift-wrapper nav.react-shift-navigation a.react-shift-next-page:active,
+div.react-shift-wrapper nav.react-shift-navigation a.react-shift-previous-page:active {
   font: 52px 'Droid Sans Mono', Helvetica;
 }
-div#react-shift-page {
+div.react-shift-page {
   margin: 0;
 }
 @media only screen and (min-width: 1000px) and (min-height: 825px) {
-  div#react-shift-wrapper div#react-shift-page {
+  div.react-shift-wrapper div.react-shift-page {
     width: 620px;
   }
-  div#react-shift-wrapper span#react-shift-pagination a#react-shift-next-page,
-  div#react-shift-wrapper span#react-shift-pagination a#react-shift-previous-page {
+  div.react-shift-wrapper span.react-shift-pagination a.react-shift-next-page,
+  div.react-shift-wrapper span.react-shift-pagination a.react-shift-previous-page {
     top: 100px;
     font: 170px 'Droid Sans Mono', Helvetica;
   }
-  div#react-shift-wrapper span#react-shift-pagination a#react-shift-next-page {
+  div.react-shift-wrapper span.react-shift-pagination a.react-shift-next-page {
     right: 90px;
   }
-  div#react-shift-wrapper span#react-shift-pagination a#react-shift-previous-page {
+  div.react-shift-wrapper span.react-shift-pagination a.react-shift-previous-page {
     left: 90px;
   }
-  div#react-shift-wrapper span#react-shift-pagination a#react-shift-next-page:active,
-  div#react-shift-wrapper span#react-shift-pagination a#react-shift-previous-page:active {
+  div.react-shift-wrapper span.react-shift-pagination a.react-shift-next-page:active,
+  div.react-shift-wrapper span.react-shift-pagination a.react-shift-previous-page:active {
     font: 160px 'Droid Sans Mono', Helvetica;
   }
 }

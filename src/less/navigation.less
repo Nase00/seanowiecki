@@ -1,106 +1,91 @@
 @import "styles";
 
-div#react-shift-wrapper {
-	position: absolute;
-	height: 90%;
-	width: 100%;
-	color: @primary-text;
-	font: 18px @primary-font;
-	div#react-shift-page {
-		position: absolute;
-		margin: 60px auto 40px auto;
-		right: 0; left: 0;
-		width: 320px;
-	}
-	nav#react-shift-navigation {
-		height: 40px;
-		vertical-align: top;
-		text-align: center;
-		width: 100%;
-		div#react-shift-fast-links {
-			position: fixed;
-			margin: 0;
-			padding: 8px;
-			top: 0;
-			width: 100%;
-			text-align: center;
-			background: @secondary-background;
-			border-bottom: 1px solid @primary-border;
-			a.react-shift-fast-link {
-				font: 30px @secondary-font;
-				transition: all .75s;
-			}
-			// a.react-shift-fast-link:hover {
+div.react-shift-wrapper {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  color: @primary-text;
+  font: 18px @primary-font;
+  div.react-shift-page {
+    position: absolute;
+    margin: 60px auto 40px auto;
+    right: 0; left: 0;
+    width: 320px;
+  }
+  nav.react-shift-navigation {
+		display: none;
+    height: 40px;
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
 
-			// }
-		}
-		a.react-shift-fast-link {
-			margin: 0 10px 0 10px;
-		}
-		span#react-shift-pagination {
-			position: fixed;
-			left: 0; right: 0; bottom: 0;
-			padding: 6px 0 0 0;
-			height: 46px;
-			background: @secondary-background;
-			border-top: 1px solid @primary-border;
+    a.react-shift-fast-link {
+      margin: 0 10px 0 10px;
+    }
+    span.react-shift-pagination {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      padding: 6px 0 0 0;
+      height: 46px;
+      background: @secondary-background;
+      border-top: 1px solid @primary-border;
 
-			a {
-				margin: 4px;
-				font: 22px @tertiary-font;
-			}
-			a.react-shift-current-page {
-				padding: 4px;
-				font: 22px @tertiary-font;
-				color: #191919;
-				background-color: @primary-link;
-				border: 1px solid #191919;
-			}
-		}
-		div.react-shift-nav-arrow {
-			display: inline-block;
-			width: 20px;
-		}
-		a#react-shift-next-page, a#react-shift-previous-page {
-			z-index: 200;
-			position: fixed;
-			bottom: -6px;
-			font: 56px @primary-font;
-		}
-		a#react-shift-next-page {
-			right: 50px;
-		}
-		a#react-shift-previous-page {
-			left: 50px;
-		}
-		a#react-shift-next-page:active, a#react-shift-previous-page:active {
-			font: 52px @primary-font;
-		}
-	}
+      a {
+        margin: 4px;
+        font: 22px @tertiary-font;
+      }
+      a.react-shift-current-page {
+        padding: 4px;
+        font: 22px @tertiary-font;
+        color: #191919;
+        background-color: @primary-link;
+        border: 1px solid #191919;
+      }
+    }
+    div.react-shift-nav-arrow {
+      display: inline-block;
+      width: 20px;
+    }
+    a.react-shift-next-page, a.react-shift-previous-page {
+      z-index: 200;
+      position: fixed;
+      bottom: -6px;
+      font: 56px @primary-font;
+    }
+    a.react-shift-next-page {
+      right: 50px;
+    }
+    a.react-shift-previous-page {
+      left: 50px;
+    }
+    a.react-shift-next-page:active, a.react-shift-previous-page:active {
+      font: 52px @primary-font;
+    }
+  }
 }
-div#react-shift-page {
-	margin: 0;
+div.react-shift-page {
+  margin: 0;
 }
 
 @media only screen and (min-width: 1000px) and (min-height: 825px) {
-	div#react-shift-wrapper {
-		div#react-shift-page {
-			width: 620px;
-		}
-		span#react-shift-pagination {
-			a#react-shift-next-page, a#react-shift-previous-page {
-				top: 100px;
-				font: 170px @primary-font;
-			}
-			a#react-shift-next-page {
-				right: 90px;
-			}
-			a#react-shift-previous-page {
-				left: 90px;
-			}
-			a#react-shift-next-page:active, a#react-shift-previous-page:active {
-				font: 160px @primary-font;
-			}
-		}
-	}
+  div.react-shift-wrapper {
+    div.react-shift-page {
+      width: 620px;
+    }
+    span.react-shift-pagination {
+      a.react-shift-next-page, a.react-shift-previous-page {
+        top: 100px;
+        font: 170px @primary-font;
+      }
+      a.react-shift-next-page {
+        right: 90px;
+      }
+      a.react-shift-previous-page {
+        left: 90px;
+      }
+      a.react-shift-next-page:active, a.react-shift-previous-page:active {
+        font: 160px @primary-font;
+      }
+    }
+  }
 }

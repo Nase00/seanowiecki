@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production grunt browserify && grunt uglify",
+    "watch": "grunt watch"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,9 @@
   },
   "homepage": "https://github.com/Nase00/nase00.github.io",
   "dependencies": {
-    "react": "^0.13.1",
-    "react-shift": "^1.2.2"
+    "react": "^15.0.0",
+    "react-dom": "^15.0.1",
+    "react-shift": "^2.1.1"
   },
   "devDependencies": {
     "babelify": "^6.1.3",
